@@ -62,7 +62,7 @@ class FamilyMember extends Model
             {
                 return array('code' => 4001,
                     'data' => array(),
-                    'message'=> $member->getError());
+                    'message'=> $member->error);
             }
         }
         catch(\Exception $e)

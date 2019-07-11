@@ -108,7 +108,7 @@ class ActivitySchedule extends Model
                 $as->rollback();
                 return array('code' => 4001,
                     'data' => array(),
-                    'message'=> $as->getError());
+                    'message'=> $as->error);
             }
 
         }
@@ -257,9 +257,55 @@ class ActivitySchedule extends Model
                 $as->rollback();
                 return array('code' => 4001,
                     'data' => array(),
-                    'message'=> $as->getError());
+                    'message'=> $as->error);
             }
 
+        }
+        catch(\Exception $e)
+        {
+            $as->rollback();
+            return array('code' => 2000,
+                'data' => array(),
+                'message'=> $e->getMessage());
+        }
+    }
+
+
+    public function delSchedule()
+    {
+        $as = new ActivitySchedule();
+        $as->startTrans();
+        try
+        {
+
+            $obj = $as::get($_REQUEST['id']);
+            //删除明细
+            $error = model('ActivityScheduleDetail')->delScheduleDetail($obj->data['activity_id'],$_REQUEST['id']);
+            if(empty($error))
+            {
+                $as->where('id',$_REQUEST['id'])->delete();
+                if(empty($as->error))
+                {
+                    $as->commit();
+                    return array('code' => 1000,
+                        'data' => array(),
+                        'message'=> '删除行程成功！');
+                }
+                else
+                {
+                    $as->rollback();
+                    return array('code' => 3000,
+                        'data' => array(),
+                        'message'=> $as->error);
+                }
+            }
+            else
+            {
+                $as->rollback();
+                return array('code' => 3000,
+                    'data' => array(),
+                    'message'=> '编辑行程失败，请稍后再试！');
+            }
         }
         catch(\Exception $e)
         {

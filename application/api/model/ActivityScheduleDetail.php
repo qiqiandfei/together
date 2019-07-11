@@ -98,4 +98,39 @@ class ActivityScheduleDetail extends Model
             return null;
         }
     }
+
+    /**
+     * Notes:删除行程
+     * @param $activityid
+     * @param $scheduleid
+     * @return string
+     * @throws \think\exception\PDOException
+     * author: Fei
+     * Time: 2019/7/11 17:28
+     */
+    public function delScheduleDetail($activityid,$scheduleid)
+    {
+        $asd = new ActivityScheduleDetail();
+        $asd->startTrans();
+        try
+        {
+            $asd->where(['activity_id'=>$activityid,'schedule_id'=>$scheduleid])
+                ->delete();
+            if(empty($asd->error))
+            {
+                $asd->commit();
+                return $asd->error;
+            }
+            else
+            {
+                $asd->rollback();
+                return 'error';
+            }
+        }
+        catch(\Exception $e)
+        {
+            $asd->rollback();
+            return 'error';
+        }
+    }
 }

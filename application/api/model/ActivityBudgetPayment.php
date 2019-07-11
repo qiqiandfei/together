@@ -65,7 +65,7 @@ class ActivityBudgetPayment extends Model
             {
                 return array('code' => 4001,
                     'data' => array(),
-                    'message'=> $abp->getError());
+                    'message'=> $abp->error);
             }
 
         }

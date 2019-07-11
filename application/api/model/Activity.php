@@ -89,7 +89,7 @@ class Activity extends Model
             {
                 return array('code' => 4001,
                     'data' => array(),
-                    'message'=> $activity->getError());
+                    'message'=> $activity->error);
             }
         }
         catch (\Exception $e)
@@ -124,7 +124,7 @@ class Activity extends Model
                 else
                 {
                     $rescrt = [];
-                    $crtactivitys = Activity::where('creator','=',$userid)->select();
+                    $crtactivitys = Activity::where(['creator'=>$userid,'is_delete'=>0])->select();
                     foreach ($rescrt as $item)
                         array_push($rescrt,$item->data);
                     if($crtactivitys)
@@ -145,7 +145,7 @@ class Activity extends Model
                 else
                 {
                     $join = [];
-                    $joinactivitys = ActivityAttender::where('family_member_id','=',$userid)
+                    $joinactivitys = ActivityAttender::where(['family_member_id'=>$userid,'is_delete'=>0])
                         ->where('attend_state','=',0)
                         ->select();
                     foreach($joinactivitys as $item)
@@ -169,13 +169,13 @@ class Activity extends Model
                 {
                     $about = array();
                     //创建的
-                    $crtactivitys = Activity::where('creator','=',$userid)->select();
+                    $crtactivitys = Activity::where(['creator'=>$userid,'is_delete'=>0])->select();
                     foreach($crtactivitys as $item)
                     {
                         array_push($about,$item);
                     }
                     //参与的
-                    $joinactivitys = ActivityAttender::where('family_member_id','=',$userid)
+                    $joinactivitys = ActivityAttender::where(['family_member_id'=>$userid,'is_delete'=>0])
                         ->where('attend_state','=',0)
                         ->select();
                     foreach($joinactivitys as $item)
@@ -192,7 +192,7 @@ class Activity extends Model
             elseif($type == 4)
             {
                 $res = [];
-                $allactivitys = Activity::all();
+                $allactivitys = Activity::where('is_delete',0)->select();
                 foreach ($allactivitys as $item)
                     array_push($res,$item->data);
                 if($allactivitys)
@@ -219,7 +219,7 @@ class Activity extends Model
     {
         try
         {
-            $activity = Activity::where('id',$_REQUEST['id'])->find();
+            $activity = Activity::where(['id'=>$_REQUEST['id'],'is_delete'=>0])->find();
             if($activity)
             {
                 return array('code' => 1000,
@@ -292,7 +292,7 @@ class Activity extends Model
             if($resval)
             {
                 $objactivity = $activity::get($_REQUEST['id']);
-                if($objactivity)
+                if(empty($activity->error))
                 {
                     return array('code' => 1000,
                         'data' => $objactivity->data,
@@ -300,16 +300,50 @@ class Activity extends Model
                 }
                 else
                 {
-                    return array('code' => 3000,
+                    return array('code' => 4001,
                         'data' => array(),
-                        'message'=> '编辑活动失败，请稍后再试！');
+                        'message'=> $activity->error);
                 }
             }
             else
             {
                 return array('code' => 4001,
                     'data' => array(),
-                    'message'=> $activity->getError());
+                    'message'=> $activity->error);
+            }
+        }
+        catch (\Exception $e)
+        {
+            return array('code' => 2000,
+                'data' => array(),
+                'message'=> $e->getMessage());
+        }
+    }
+
+    /**
+     * Notes:删除活动
+     * @return array
+     * author: Fei
+     * Time: 2019/7/11 17:12
+     */
+    public function delActivity()
+    {
+        try
+        {
+            $activity = new Activity();
+            $activity->where('id',$_REQUEST['id'])->update(['is_delete'=>1]);
+            if(empty($activity->error))
+            {
+                $objactivity = $activity::get($_REQUEST['id']);
+                return array('code' => 1000,
+                    'data' => $objactivity->data,
+                    'message'=> '删除活动成功！');
+            }
+            else
+            {
+                return array('code' => 4001,
+                    'data' => array(),
+                    'message'=> $activity->error);
             }
         }
         catch (\Exception $e)

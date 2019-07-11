@@ -61,7 +61,7 @@ class ActivityLabel extends Model
             {
                 return array('code' => 4001,
                     'data' => array(),
-                    'message'=> $family->getError());
+                    'message'=> $family->error);
             }
 
         }

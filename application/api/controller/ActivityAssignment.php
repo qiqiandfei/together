@@ -1,8 +1,8 @@
 <?php
 /**
  * Create by: yufei
- * Date: 2019/7/10
- * Time: 14:19
+ * Date: 2019/7/11
+ * Time: 15:54
  * Copyright © 2019年 Fei. All rights reserved.
  */
 
@@ -11,14 +11,14 @@ namespace app\api\controller;
 
 use think\Controller;
 
-class ActivitySchedule extends Controller
+class ActivityAssignment extends Controller
 {
     /**
-     * Notes:添加行程
+     * Notes:创建任务
      * author: Fei
-     * Time: 2019/7/10 14:21
+     * Time: 2019/7/11 15:57
      */
-    public function addSchedule()
+    public function crtActivityTask()
     {
         //加密前参数
         $ranstr = $_REQUEST['ranStr'];
@@ -31,9 +31,9 @@ class ActivitySchedule extends Controller
         if($checkres['code'] == 1000)
         {
             //实例化模型
-            $model = new \app\api\model\ActivitySchedule();
-            //添加行程
-            $res = $model->addSchedule();
+            $model = new \app\api\model\ActivityAssignment();
+            //创建活动任务
+            $res = $model->crtActivityTask();
             json($res['code'],$res['data'],$res['message']);
         }
         else
@@ -43,11 +43,11 @@ class ActivitySchedule extends Controller
     }
 
     /**
-     * Notes:获取活动行程
+     * Notes:编辑活动任务
      * author: Fei
-     * Time: 2019/7/11 14:17
+     * Time: 2019/7/11 17:09
      */
-    public function getSchedule()
+    public function editActivityTask()
     {
         //加密前参数
         $ranstr = $_REQUEST['ranStr'];
@@ -60,9 +60,9 @@ class ActivitySchedule extends Controller
         if($checkres['code'] == 1000)
         {
             //实例化模型
-            $model = new \app\api\model\ActivitySchedule();
-            //添加行程
-            $res = $model->getSchedule();
+            $model = new \app\api\model\ActivityAssignment();
+            //创建活动任务
+            $res = $model->editActivityTask();
             json($res['code'],$res['data'],$res['message']);
         }
         else
@@ -72,11 +72,11 @@ class ActivitySchedule extends Controller
     }
 
     /**
-     * Notes:编辑活动行程
+     * Notes:删除活动任务
      * author: Fei
-     * Time: 2019/7/11 14:42
+     * Time: 2019/7/11 17:09
      */
-    public function editSchedule()
+    public function delActivityTask()
     {
         //加密前参数
         $ranstr = $_REQUEST['ranStr'];
@@ -89,38 +89,9 @@ class ActivitySchedule extends Controller
         if($checkres['code'] == 1000)
         {
             //实例化模型
-            $model = new \app\api\model\ActivitySchedule();
-            //添加行程
-            $res = $model->editSchedule();
-            json($res['code'],$res['data'],$res['message']);
-        }
-        else
-        {
-            json($checkres['code'],$checkres['data'],$checkres['message']);
-        }
-    }
-
-    /**
-     * Notes:删除行程
-     * author: Fei
-     * Time: 2019/7/11 17:22
-     */
-    public function delSchedule()
-    {
-        //加密前参数
-        $ranstr = $_REQUEST['ranStr'];
-        //加密后参数
-        $reqtoken = $_REQUEST['reqToken'];
-        $logintoken = $_REQUEST['token'];
-
-        $checkres = check_req_login($reqtoken,$ranstr,$logintoken);
-        //验证请求是否合法
-        if($checkres['code'] == 1000)
-        {
-            //实例化模型
-            $model = new \app\api\model\ActivitySchedule();
-            //添加行程
-            $res = $model->delSchedule();
+            $model = new \app\api\model\ActivityAssignment();
+            //创建活动任务
+            $res = $model->delActivityTask();
             json($res['code'],$res['data'],$res['message']);
         }
         else

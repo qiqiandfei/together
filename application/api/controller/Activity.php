@@ -89,12 +89,10 @@ class Activity extends Controller
         //验证请求是否合法
         if($checkres['code'] == 1000)
         {
-            $userid = $_REQUEST['userId'];
-            $type = $_REQUEST['type'];
             //实例化模型
             $model = new \app\api\model\Activity();
             //编辑活动
-            $res = $model->editActivity($type,$userid);
+            $res = $model->editActivity();
             json($res['code'],$res['data'],$res['message']);
         }
         else
@@ -120,12 +118,39 @@ class Activity extends Controller
         //验证请求是否合法
         if($checkres['code'] == 1000)
         {
-            $userid = $_REQUEST['userId'];
-            $type = $_REQUEST['type'];
             //实例化模型
             $model = new \app\api\model\Activity();
             //创建活动
-            $res = $model->getActivity($type,$userid);
+            $res = $model->getActivity();
+            json($res['code'],$res['data'],$res['message']);
+        }
+        else
+        {
+            json($checkres['code'],$checkres['data'],$checkres['message']);
+        }
+    }
+
+    /**
+     * Notes:删除活动计划
+     * author: Fei
+     * Time: 2019/7/11 17:12
+     */
+    public function delActivity()
+    {
+        //加密前参数
+        $ranstr = $_REQUEST['ranStr'];
+        //加密后参数
+        $reqtoken = $_REQUEST['reqToken'];
+        $logintoken = $_REQUEST['token'];
+
+        $checkres = check_req_login($reqtoken,$ranstr,$logintoken);
+        //验证请求是否合法
+        if($checkres['code'] == 1000)
+        {
+            //实例化模型
+            $model = new \app\api\model\Activity();
+            //创建活动
+            $res = $model->delActivity();
             json($res['code'],$res['data'],$res['message']);
         }
         else
