@@ -1,0 +1,619 @@
+---------------------------------------------------------------
+[ 2019-01-07T13:14:39+08:00 ] 0.0.0.0 GET localhost/tp5/public/activity/api/index
+[运行时间：0.093324s] [吞吐率：10.72req/s] [内存消耗：1,593.47kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'activity',
+    1 => 'api',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T13:15:19+08:00 ] 0.0.0.0 GET localhost/tp5/public/activity/activity/index
+[运行时间：0.078833s] [吞吐率：12.69req/s] [内存消耗：1,593.39kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'activity',
+    1 => 'activity',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T13:16:39+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/index
+[运行时间：0.077316s] [吞吐率：12.93req/s] [内存消耗：1,595.00kb] [文件加载：40]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T13:50:22+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/index
+[运行时间：0.059115s] [吞吐率：16.92req/s] [内存消耗：1,446.99kb] [文件加载：34]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Activity->index[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T13:50:23+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/index
+[运行时间：0.053824s] [吞吐率：18.58req/s] [内存消耗：1,446.99kb] [文件加载：34]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Activity->index[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T13:50:24+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/index
+[运行时间：0.048112s] [吞吐率：20.78req/s] [内存消耗：1,446.99kb] [文件加载：34]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Activity->index[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T13:50:30+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/index
+[运行时间：0.049340s] [吞吐率：20.27req/s] [内存消耗：1,446.99kb] [文件加载：34]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Activity->index[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T13:58:19+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/index
+[运行时间：0.082364s] [吞吐率：12.14req/s] [内存消耗：1,602.04kb] [文件加载：40]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\activity\common\CommonController' not found[D:\xampp\htdocs\tp5\application\api\controller\Activity.php:13]
+---------------------------------------------------------------
+[ 2019-01-07T13:58:35+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/index
+[运行时间：0.057763s] [吞吐率：17.31req/s] [内存消耗：1,449.74kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Activity->index[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T13:58:38+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/index
+[运行时间：0.050080s] [吞吐率：19.97req/s] [内存消耗：1,449.74kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Activity->index[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T14:02:48+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/index
+[运行时间：0.054922s] [吞吐率：18.21req/s] [内存消耗：1,449.45kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Activity->index[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T14:03:00+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/index
+[运行时间：0.061043s] [吞吐率：16.38req/s] [内存消耗：1,449.74kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Activity->index[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T14:03:58+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/test/sdfsdfsdfsdf
+[运行时间：0.084525s] [吞吐率：11.83req/s] [内存消耗：1,586.84kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]方法参数错误:php_errormsg[D:\xampp\htdocs\tp5\thinkphp\library\think\App.php:431]
+---------------------------------------------------------------
+[ 2019-01-07T14:04:43+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/test/php_errormsg/sdfsdfsdfsdf
+[运行时间：0.050300s] [吞吐率：19.88req/s] [内存消耗：1,450.94kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+  'php_errormsg' => 'sdfsdfsdfsdf',
+)
+[ info ] [ RUN ] app\api\controller\Activity->test[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T14:04:59+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/test/php_errormsg/%E6%88%91%E6%98%AF%E5%8F%82%E6%95%B0
+[运行时间：0.052197s] [吞吐率：19.16req/s] [内存消耗：1,450.89kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+  'php_errormsg' => '我是参数',
+)
+[ info ] [ RUN ] app\api\controller\Activity->test[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T14:06:39+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/test/php_errormsg1/111111/php_errormsg2/222222
+[运行时间：0.054111s] [吞吐率：18.48req/s] [内存消耗：1,451.81kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+  'php_errormsg1' => '111111',
+  'php_errormsg2' => '222222',
+)
+[ info ] [ RUN ] app\api\controller\Activity->test[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T14:07:19+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/test/php_errormsg1/111111/php_errormsg2/222222
+[运行时间：0.052602s] [吞吐率：19.01req/s] [内存消耗：1,452.04kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+  'php_errormsg1' => '111111',
+  'php_errormsg2' => '222222',
+)
+[ info ] [ RUN ] app\api\controller\Activity->test[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T14:07:32+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/test/php_errormsg1/111111/php_errormsg2/222222
+[运行时间：0.050625s] [吞吐率：19.75req/s] [内存消耗：1,452.02kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+  'php_errormsg1' => '111111',
+  'php_errormsg2' => '222222',
+)
+[ info ] [ RUN ] app\api\controller\Activity->test[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T14:07:44+08:00 ] 0.0.0.0 GET localhost/tp5/public/api/activity/test/php_errormsg1/111111/php_errormsg2/222222
+[运行时间：0.051665s] [吞吐率：19.36req/s] [内存消耗：1,452.02kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+  'php_errormsg1' => '111111',
+  'php_errormsg2' => '222222',
+)
+[ info ] [ RUN ] app\api\controller\Activity->test[ D:\xampp\htdocs\tp5\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T14:08:25+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/activity/test/php_errormsg1/111111/php_errormsg2/222222
+[运行时间：0.053896s] [吞吐率：18.55req/s] [内存消耗：1,451.77kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+  'php_errormsg1' => '111111',
+  'php_errormsg2' => '222222',
+)
+[ info ] [ RUN ] app\api\controller\Activity->test[ D:\xampp\htdocs\yqb\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T14:08:27+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/activity/test/php_errormsg1/111111/php_errormsg2/222222
+[运行时间：0.046396s] [吞吐率：21.55req/s] [内存消耗：1,452.02kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+  'php_errormsg1' => '111111',
+  'php_errormsg2' => '222222',
+)
+[ info ] [ RUN ] app\api\controller\Activity->test[ D:\xampp\htdocs\yqb\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-07T14:08:28+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/activity/test/php_errormsg1/111111/php_errormsg2/222222
+[运行时间：0.045015s] [吞吐率：22.21req/s] [内存消耗：1,452.02kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'activity',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'user=wangyongliang2; pwd=wyl2.qaz; rememberpwd=1',
+)
+[ info ] [ PARAM ] array (
+  'php_errormsg1' => '111111',
+  'php_errormsg2' => '222222',
+)
+[ info ] [ RUN ] app\api\controller\Activity->test[ D:\xampp\htdocs\yqb\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File

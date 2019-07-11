@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>请求测试</title>
+</head>
+<script type="text/javascript" src="{$Think.config.JSPATH}/jquery.1.10.2.js"></script>
+<body>
+<a href="javascript:void(0)"  plain="true" onclick="request()">请求</a>
+<br>
+<!--<input accept="image" type="file"/><a href="javascript:void(0)"  plain="true" onclick="upload()">上传</a>-->
+</body>
+<script>
+    function request() {
+    $.ajax({
+        type:"POST",
+        url:"{:url('api/test/getinfo')}",
+        data:{
+            id:"1",
+            ranStr:"123456789",
+            reqToken:"45adf4b6b359f249aece0ae18a88fc78",
+            encryparam:"rgasdasdfegwerghyj",
+            encrystr:"38aa74c9407bf1ea131f1b7781a104957ec229f14bcf10b30a4e32982b9deacc",
+            template_id:"123123",
+            activity_name:"测试活动",
+            activity_type:1,
+            activity_source:1,
+            begin_date:"2019-06-20",
+            end_date:"2019-06-23",
+            day_count:3,
+            departure_time:'09:00:00',
+            departure_address:"永定路中学门口",
+            average_budget:200,
+            need_pay:"",
+            registration_fee:0,
+            conver_img:"",
+            target_address:"上庄水库",
+            brief_introduction:"我是一个活动简介",
+            remark:"我是一个备注",
+            allow_edit:0,
+            creator:"12341234",
+            },
+        success:function(data){
+            // var res = $.parseJSON(data);
+            // if(res.status == "1")
+            // {
+            //     alert("保存成功！")
+            // }
+            // else
+            // {
+            //     alert(res.message);
+            // }
+
+        }
+    });
+}
+
+function upload() {
+    $.ajax({
+        type:"POST",
+        url:"{:url('api/test/picupload')}",
+
+        success:function(data){
+            // var res = $.parseJSON(data);
+            // if(res.status == "1")
+            // {
+            //     alert("保存成功！")
+            // }
+            // else
+            // {
+            //     alert(res.message);
+            // }
+
+        }
+    });
+}
+</script>
+</html>

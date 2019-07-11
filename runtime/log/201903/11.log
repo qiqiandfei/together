@@ -1,0 +1,1574 @@
+---------------------------------------------------------------
+[ 2019-03-11T09:33:52+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=17484
+[运行时间：0.712282s] [吞吐率：1.40req/s] [内存消耗：2,110.55kb] [文件加载：44]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '17484',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T09:34:02+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：8.103045s] [吞吐率：0.12req/s] [内存消耗：1,956.56kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=17484',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=17484',
+)
+[ info ] [ PARAM ] array (
+  'code' => '061f9gjs0QycGf1XwIgs0H6Yis0f9gjY',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\api\common\http_curl()[D:\xampp\htdocs\yqb\application\api\common\common.php:67]
+---------------------------------------------------------------
+[ 2019-03-11T09:34:27+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：7.654752s] [吞吐率：0.13req/s] [内存消耗：1,956.55kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=17484',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=17484',
+)
+[ info ] [ PARAM ] array (
+  'code' => '061f9gjs0QycGf1XwIgs0H6Yis0f9gjY',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\api\common\http_curl()[D:\xampp\htdocs\yqb\application\api\common\common.php:67]
+---------------------------------------------------------------
+[ 2019-03-11T09:36:25+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=17484
+[运行时间：0.027992s] [吞吐率：35.72req/s] [内存消耗：1,948.47kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=17484',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '17484',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T09:36:48+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：21.940145s] [吞吐率：0.05req/s] [内存消耗：1,961.98kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=17484',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=17484',
+)
+[ info ] [ PARAM ] array (
+  'code' => '061f9gjs0QycGf1XwIgs0H6Yis0f9gjY',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: stdClass::$session_key[D:\xampp\htdocs\yqb\application\api\controller\Users.php:99]
+---------------------------------------------------------------
+[ 2019-03-11T09:39:23+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：66.556825s] [吞吐率：0.02req/s] [内存消耗：1,801.52kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=17484',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=17484',
+)
+[ info ] [ PARAM ] array (
+  'code' => '061f9gjs0QycGf1XwIgs0H6Yis0f9gjY',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T09:40:06+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084
+[运行时间：0.041368s] [吞吐率：24.17req/s] [内存消耗：1,948.24kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=17484',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '16084',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T09:42:17+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：129.064805s] [吞吐率：0.01req/s] [内存消耗：1,940.26kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'code' => '061f9gjs0QycGf1XwIgs0H6Yis0f9gjY',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: stdClass::$session_key[D:\xampp\htdocs\yqb\application\api\controller\Users.php:100]
+---------------------------------------------------------------
+[ 2019-03-11T09:42:17+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084
+[运行时间：0.027155s] [吞吐率：36.83req/s] [内存消耗：1,950.13kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '16084',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T09:42:18+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：0.660931s] [吞吐率：1.51req/s] [内存消耗：1,796.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'code' => '061f9gjs0QycGf1XwIgs0H6Yis0f9gjY',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T09:42:25+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：0.395369s] [吞吐率：2.53req/s] [内存消耗：1,796.30kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'code' => '061f9gjs0QycGf1XwIgs0H6Yis0f9gjY',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T10:03:10+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：29.870144s] [吞吐率：0.03req/s] [内存消耗：1,823.55kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'code' => '061f9gjs0QycGf1XwIgs0H6Yis0f9gjY',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T10:23:12+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084
+[运行时间：0.043268s] [吞吐率：23.11req/s] [内存消耗：2,113.93kb] [文件加载：44]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '16084',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T10:24:28+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：70.926067s] [吞吐率：0.01req/s] [内存消耗：1,997.47kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'code' => '061nd7mC00LKgi2n5EmC0btomC0nd7mh',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: stdClass::$errcode[D:\xampp\htdocs\yqb\application\api\controller\Users.php:99]
+---------------------------------------------------------------
+[ 2019-03-11T10:28:49+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：176.824908s] [吞吐率：0.01req/s] [内存消耗：1,892.81kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'code' => '061nd7mC00LKgi2n5EmC0btomC0nd7mh',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Use of undefined constant errcode - assumed 'errcode'[xdebug://debug-eval(1) : eval()'d code:1]
+---------------------------------------------------------------
+[ 2019-03-11T10:28:53+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084
+[运行时间：0.047990s] [吞吐率：20.84req/s] [内存消耗：2,113.93kb] [文件加载：44]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '16084',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T10:31:38+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：163.580328s] [吞吐率：0.01req/s] [内存消耗：1,960.73kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'code' => '081YeP4a2cRclM0UdY5a20sZ4a2YeP4R',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: stdClass::$errcode[D:\xampp\htdocs\yqb\application\api\controller\Users.php:99]
+---------------------------------------------------------------
+[ 2019-03-11T10:32:40+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：58.779839s] [吞吐率：0.02req/s] [内存消耗：1,829.44kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'code' => '081YeP4a2cRclM0UdY5a20sZ4a2YeP4R',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T10:32:49+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：6.533377s] [吞吐率：0.15req/s] [内存消耗：1,969.93kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'code' => '081YeP4a2cRclM0UdY5a20sZ4a2YeP4R',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Cannot use object of type stdClass as array[D:\xampp\htdocs\yqb\application\api\controller\Users.php:100]
+---------------------------------------------------------------
+[ 2019-03-11T10:33:50+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：16.598298s] [吞吐率：0.06req/s] [内存消耗：1,831.41kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'code' => '081YeP4a2cRclM0UdY5a20sZ4a2YeP4R',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T15:59:40+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084
+[运行时间：0.048130s] [吞吐率：20.78req/s] [内存消耗：2,113.86kb] [文件加载：44]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '16084',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T15:59:46+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：0.420016s] [吞吐率：2.38req/s] [内存消耗：1,796.99kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'code' => '011HByhf0lq73v11KUhf0P4rhf0HByhs',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:00:06+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：0.361367s] [吞吐率：2.77req/s] [内存消耗：1,796.99kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=16084',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'code' => '011HByhf0lq73v11KUhf0P4rhf0HByhs',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:00:10+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15008
+[运行时间：0.033206s] [吞吐率：30.12req/s] [内存消耗：1,950.26kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16084',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '15008',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:00:14+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：0.576552s] [吞吐率：1.73req/s] [内存消耗：1,796.99kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15008',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15008',
+)
+[ info ] [ PARAM ] array (
+  'code' => '011HByhf0lq73v11KUhf0P4rhf0HByhs',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:00:35+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：9.346793s] [吞吐率：0.11req/s] [内存消耗：1,827.59kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15008',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15008',
+)
+[ info ] [ PARAM ] array (
+  'code' => '011HByhf0lq73v11KUhf0P4rhf0HByhs',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:03:23+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：0.436436s] [吞吐率：2.29req/s] [内存消耗：1,797.00kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15008',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15008',
+)
+[ info ] [ PARAM ] array (
+  'code' => '011HByhf0lq73v11KUhf0P4rhf0HByhs',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:03:41+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/setsessionkey.html
+[运行时间：11.627693s] [吞吐率：0.09req/s] [内存消耗：1,831.43kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'setsessionkey',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15008',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15008',
+)
+[ info ] [ PARAM ] array (
+  'code' => '011HByhf0lq73v11KUhf0P4rhf0HByhs',
+)
+[ info ] [ RUN ] app\api\controller\Users->setsessionkey[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:11:55+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15008
+[运行时间：0.041961s] [吞吐率：23.83req/s] [内存消耗：2,113.79kb] [文件加载：44]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15008',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '15008',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:12:44+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/adduser.html
+[运行时间：35.260501s] [吞吐率：0.03req/s] [内存消耗：1,905.88kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'adduser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '18',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15008',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15008',
+)
+[ info ] [ PARAM ] array (
+  'iv' => '',
+  'encryptedData' => '',
+)
+[ info ] [ RUN ] app\api\controller\Users->adduser[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:15:25+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15008
+[运行时间：0.043128s] [吞吐率：23.19req/s] [内存消耗：2,114.04kb] [文件加载：44]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15008',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '15008',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:17:07+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/adduser.html
+[运行时间：100.190680s] [吞吐率：0.01req/s] [内存消耗：1,901.93kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'adduser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '576',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15008',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15008',
+)
+[ info ] [ PARAM ] array (
+  'iv' => 'zMisWTuXCb64suWZBZ9JnQ==',
+  'encryptedData' => 'TlAixwu5xOlOrbukPavZgWbqzIBjCEIqSo89sMtc97IkEu4RuiB79ITS1f7IihsCw/SrioZlaB1RHIcys6fRYmR/amAJcvznktbt5DAoU8SxGBw6j/31Z3JrcdJ7YUS3D/s9/Es+PdepwutL2MH+v1eODpqMwsV6OMXghWl5ANowjIxVadvdsh7+P7N0YxhS1gr4f7h9irz+KtRby1sv11w3l+PTBAlyQoNT/PrX1WXRMQhSvYyCwvtQLvhLNK2Z/ZpZgubnJ3pkjWdbyQIqflb+15rRTo5tI2jeWZOzQdbzKPSTJJ0QSZc2SVR1Tx7TJNeLvsQa0TMewpLavh/kfg+zB0FgxNROPmtyfysZzxI5LtDGDyggNfr2JEBL2PmkowV8aeKw4HBDY4MfV/JGtCRC1UKQuuY3RduuJdJPBsRek0KVqcnzQu7ql5AAwe7QcWc7t+VnbVU5429oE3qtLYcN8hcq+Dwq1yEG1kMomjk=',
+)
+[ info ] [ RUN ] app\api\controller\Users->adduser[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:17:44+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/adduser.html
+[运行时间：35.040932s] [吞吐率：0.03req/s] [内存消耗：1,901.47kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'adduser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '576',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15008',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15008',
+)
+[ info ] [ PARAM ] array (
+  'iv' => 'zMisWTuXCb64suWZBZ9JnQ==',
+  'encryptedData' => 'TlAixwu5xOlOrbukPavZgWbqzIBjCEIqSo89sMtc97IkEu4RuiB79ITS1f7IihsCw/SrioZlaB1RHIcys6fRYmR/amAJcvznktbt5DAoU8SxGBw6j/31Z3JrcdJ7YUS3D/s9/Es+PdepwutL2MH+v1eODpqMwsV6OMXghWl5ANowjIxVadvdsh7+P7N0YxhS1gr4f7h9irz+KtRby1sv11w3l+PTBAlyQoNT/PrX1WXRMQhSvYyCwvtQLvhLNK2Z/ZpZgubnJ3pkjWdbyQIqflb+15rRTo5tI2jeWZOzQdbzKPSTJJ0QSZc2SVR1Tx7TJNeLvsQa0TMewpLavh/kfg+zB0FgxNROPmtyfysZzxI5LtDGDyggNfr2JEBL2PmkowV8aeKw4HBDY4MfV/JGtCRC1UKQuuY3RduuJdJPBsRek0KVqcnzQu7ql5AAwe7QcWc7t+VnbVU5429oE3qtLYcN8hcq+Dwq1yEG1kMomjk=',
+)
+[ info ] [ RUN ] app\api\controller\Users->adduser[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:18:13+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/adduser.html
+[运行时间：14.637998s] [吞吐率：0.07req/s] [内存消耗：1,798.63kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'adduser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '576',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15008',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15008',
+)
+[ info ] [ PARAM ] array (
+  'iv' => 'zMisWTuXCb64suWZBZ9JnQ==',
+  'encryptedData' => 'TlAixwu5xOlOrbukPavZgWbqzIBjCEIqSo89sMtc97IkEu4RuiB79ITS1f7IihsCw/SrioZlaB1RHIcys6fRYmR/amAJcvznktbt5DAoU8SxGBw6j/31Z3JrcdJ7YUS3D/s9/Es+PdepwutL2MH+v1eODpqMwsV6OMXghWl5ANowjIxVadvdsh7+P7N0YxhS1gr4f7h9irz+KtRby1sv11w3l+PTBAlyQoNT/PrX1WXRMQhSvYyCwvtQLvhLNK2Z/ZpZgubnJ3pkjWdbyQIqflb+15rRTo5tI2jeWZOzQdbzKPSTJJ0QSZc2SVR1Tx7TJNeLvsQa0TMewpLavh/kfg+zB0FgxNROPmtyfysZzxI5LtDGDyggNfr2JEBL2PmkowV8aeKw4HBDY4MfV/JGtCRC1UKQuuY3RduuJdJPBsRek0KVqcnzQu7ql5AAwe7QcWc7t+VnbVU5429oE3qtLYcN8hcq+Dwq1yEG1kMomjk=',
+)
+[ info ] [ RUN ] app\api\controller\Users->adduser[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:18:16+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15008
+[运行时间：0.238999s] [吞吐率：4.18req/s] [内存消耗：2,114.12kb] [文件加载：44]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15008',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '15008',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:18:23+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=18928
+[运行时间：0.060985s] [吞吐率：16.40req/s] [内存消耗：1,950.27kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15008',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '18928',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:34:06+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/adduser.html
+[运行时间：941.100798s] [吞吐率：0.00req/s] [内存消耗：1,904.38kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'adduser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '572',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=18928',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=18928',
+)
+[ info ] [ PARAM ] array (
+  'iv' => 'lsSiPbkszxYZV6jGe/MMIQ==',
+  'encryptedData' => 'EHfVmr+dIb3D+ewwNRDQt+Kz0Ri1V75Gwap+QeIcf2WeCrGWL9U4KkleAImj67n7sXu/jqoAB6oEeZQVfUovNnHyM5JNs2VxeqWeFKtuXCdQg9EYYHrAM2d6zAMcugcNAI5Gsi9A5aXdSZYK/2EGfpaE75ULwLnuoogmbhqvI1RCTrllI2nxS3bpsrBq7YgWPDpG+zGUZ6tFqOqnkq9FAFAxREjcDsuzbd4axdCpNRN018y8vqELykQlhee+WiRormDLIfd5H6EzPrGEMtz/YOABdK8Xsj//R931fbnSNje0GXqEW5pAJTaw6jw8X24bXutYdRHT/ukhVmqX8jhFvrlEH5ojARIroixRkwLvHlmUVBQiOO0HgRNiVWBMNoHkkATjjnDGhXapinSUmlMZJ8nG76z7MEo5bbRGsatc7LG1G2fqEjd8mJKT2RvqSqaDWcdqWR5E/IBI09bl7nwc7feAy0CyOE/mims+fKL8yQg=',
+)
+[ info ] [ RUN ] app\api\controller\Users->adduser[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:36:30+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=18928
+[运行时间：0.227941s] [吞吐率：4.39req/s] [内存消耗：1,950.63kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=18928',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '18928',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:36:31+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/adduser.html
+[运行时间：0.020229s] [吞吐率：49.43req/s] [内存消耗：1,901.66kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'adduser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '572',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=18928',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=18928',
+)
+[ info ] [ PARAM ] array (
+  'iv' => 'lsSiPbkszxYZV6jGe/MMIQ==',
+  'encryptedData' => 'EHfVmr+dIb3D+ewwNRDQt+Kz0Ri1V75Gwap+QeIcf2WeCrGWL9U4KkleAImj67n7sXu/jqoAB6oEeZQVfUovNnHyM5JNs2VxeqWeFKtuXCdQg9EYYHrAM2d6zAMcugcNAI5Gsi9A5aXdSZYK/2EGfpaE75ULwLnuoogmbhqvI1RCTrllI2nxS3bpsrBq7YgWPDpG+zGUZ6tFqOqnkq9FAFAxREjcDsuzbd4axdCpNRN018y8vqELykQlhee+WiRormDLIfd5H6EzPrGEMtz/YOABdK8Xsj//R931fbnSNje0GXqEW5pAJTaw6jw8X24bXutYdRHT/ukhVmqX8jhFvrlEH5ojARIroixRkwLvHlmUVBQiOO0HgRNiVWBMNoHkkATjjnDGhXapinSUmlMZJ8nG76z7MEo5bbRGsatc7LG1G2fqEjd8mJKT2RvqSqaDWcdqWR5E/IBI09bl7nwc7feAy0CyOE/mims+fKL8yQg=',
+)
+[ info ] [ RUN ] app\api\controller\Users->adduser[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:36:35+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15252
+[运行时间：0.039600s] [吞吐率：25.25req/s] [内存消耗：1,950.27kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=18928',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '15252',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:36:48+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/adduser.html
+[运行时间：10.436608s] [吞吐率：0.10req/s] [内存消耗：1,909.16kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'adduser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '572',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15252',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15252',
+)
+[ info ] [ PARAM ] array (
+  'iv' => 'lsSiPbkszxYZV6jGe/MMIQ==',
+  'encryptedData' => 'EHfVmr+dIb3D+ewwNRDQt+Kz0Ri1V75Gwap+QeIcf2WeCrGWL9U4KkleAImj67n7sXu/jqoAB6oEeZQVfUovNnHyM5JNs2VxeqWeFKtuXCdQg9EYYHrAM2d6zAMcugcNAI5Gsi9A5aXdSZYK/2EGfpaE75ULwLnuoogmbhqvI1RCTrllI2nxS3bpsrBq7YgWPDpG+zGUZ6tFqOqnkq9FAFAxREjcDsuzbd4axdCpNRN018y8vqELykQlhee+WiRormDLIfd5H6EzPrGEMtz/YOABdK8Xsj//R931fbnSNje0GXqEW5pAJTaw6jw8X24bXutYdRHT/ukhVmqX8jhFvrlEH5ojARIroixRkwLvHlmUVBQiOO0HgRNiVWBMNoHkkATjjnDGhXapinSUmlMZJ8nG76z7MEo5bbRGsatc7LG1G2fqEjd8mJKT2RvqSqaDWcdqWR5E/IBI09bl7nwc7feAy0CyOE/mims+fKL8yQg=',
+)
+[ info ] [ RUN ] app\api\controller\Users->adduser[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:40:33+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/adduser.html
+[运行时间：214.946534s] [吞吐率：0.00req/s] [内存消耗：1,909.21kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'adduser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '572',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15252',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15252',
+)
+[ info ] [ PARAM ] array (
+  'iv' => 'lsSiPbkszxYZV6jGe/MMIQ==',
+  'encryptedData' => 'EHfVmr+dIb3D+ewwNRDQt+Kz0Ri1V75Gwap+QeIcf2WeCrGWL9U4KkleAImj67n7sXu/jqoAB6oEeZQVfUovNnHyM5JNs2VxeqWeFKtuXCdQg9EYYHrAM2d6zAMcugcNAI5Gsi9A5aXdSZYK/2EGfpaE75ULwLnuoogmbhqvI1RCTrllI2nxS3bpsrBq7YgWPDpG+zGUZ6tFqOqnkq9FAFAxREjcDsuzbd4axdCpNRN018y8vqELykQlhee+WiRormDLIfd5H6EzPrGEMtz/YOABdK8Xsj//R931fbnSNje0GXqEW5pAJTaw6jw8X24bXutYdRHT/ukhVmqX8jhFvrlEH5ojARIroixRkwLvHlmUVBQiOO0HgRNiVWBMNoHkkATjjnDGhXapinSUmlMZJ8nG76z7MEo5bbRGsatc7LG1G2fqEjd8mJKT2RvqSqaDWcdqWR5E/IBI09bl7nwc7feAy0CyOE/mims+fKL8yQg=',
+)
+[ info ] [ RUN ] app\api\controller\Users->adduser[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:40:45+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15252
+[运行时间：0.039618s] [吞吐率：25.24req/s] [内存消耗：1,951.17kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15252',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '15252',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:40:46+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15252
+[运行时间：0.025426s] [吞吐率：39.33req/s] [内存消耗：1,951.17kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15252',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '15252',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:40:46+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15252
+[运行时间：0.029602s] [吞吐率：33.78req/s] [内存消耗：1,951.17kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15252',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '15252',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T16:47:13+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/adduser.html
+[运行时间：385.703347s] [吞吐率：0.00req/s] [内存消耗：1,912.52kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'adduser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '572',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15252',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15252',
+)
+[ info ] [ PARAM ] array (
+  'iv' => 'lsSiPbkszxYZV6jGe/MMIQ==',
+  'encryptedData' => 'EHfVmr+dIb3D+ewwNRDQt+Kz0Ri1V75Gwap+QeIcf2WeCrGWL9U4KkleAImj67n7sXu/jqoAB6oEeZQVfUovNnHyM5JNs2VxeqWeFKtuXCdQg9EYYHrAM2d6zAMcugcNAI5Gsi9A5aXdSZYK/2EGfpaE75ULwLnuoogmbhqvI1RCTrllI2nxS3bpsrBq7YgWPDpG+zGUZ6tFqOqnkq9FAFAxREjcDsuzbd4axdCpNRN018y8vqELykQlhee+WiRormDLIfd5H6EzPrGEMtz/YOABdK8Xsj//R931fbnSNje0GXqEW5pAJTaw6jw8X24bXutYdRHT/ukhVmqX8jhFvrlEH5ojARIroixRkwLvHlmUVBQiOO0HgRNiVWBMNoHkkATjjnDGhXapinSUmlMZJ8nG76z7MEo5bbRGsatc7LG1G2fqEjd8mJKT2RvqSqaDWcdqWR5E/IBI09bl7nwc7feAy0CyOE/mims+fKL8yQg=',
+)
+[ info ] [ RUN ] app\api\controller\Users->adduser[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T17:26:35+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/adduser.html
+[运行时间：67.406880s] [吞吐率：0.01req/s] [内存消耗：1,902.24kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'adduser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '572',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15252',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15252',
+)
+[ info ] [ PARAM ] array (
+  'iv' => 'lsSiPbkszxYZV6jGe/MMIQ==',
+  'encryptedData' => 'EHfVmr+dIb3D+ewwNRDQt+Kz0Ri1V75Gwap+QeIcf2WeCrGWL9U4KkleAImj67n7sXu/jqoAB6oEeZQVfUovNnHyM5JNs2VxeqWeFKtuXCdQg9EYYHrAM2d6zAMcugcNAI5Gsi9A5aXdSZYK/2EGfpaE75ULwLnuoogmbhqvI1RCTrllI2nxS3bpsrBq7YgWPDpG+zGUZ6tFqOqnkq9FAFAxREjcDsuzbd4axdCpNRN018y8vqELykQlhee+WiRormDLIfd5H6EzPrGEMtz/YOABdK8Xsj//R931fbnSNje0GXqEW5pAJTaw6jw8X24bXutYdRHT/ukhVmqX8jhFvrlEH5ojARIroixRkwLvHlmUVBQiOO0HgRNiVWBMNoHkkATjjnDGhXapinSUmlMZJ8nG76z7MEo5bbRGsatc7LG1G2fqEjd8mJKT2RvqSqaDWcdqWR5E/IBI09bl7nwc7feAy0CyOE/mims+fKL8yQg=',
+)
+[ info ] [ RUN ] app\api\controller\Users->adduser[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T17:27:31+08:00 ] 0.0.0.0 GET localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15252
+[运行时间：0.029174s] [吞吐率：34.28req/s] [内存消耗：1,950.59kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15252',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '15252',
+)
+[ info ] [ RUN ] app\api\controller\Users->test[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\yqb\public/../application/api\view\users\test.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-11T17:27:41+08:00 ] 0.0.0.0 POST localhost/yqb/public/api/users/adduser.html
+[运行时间：0.029054s] [吞吐率：34.42req/s] [内存消耗：1,901.59kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'users',
+    2 => 'adduser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '572',
+  'accept' => '*/*',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/yqb/public/api/users/test?XDEBUG_SESSION_START=15252',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15252',
+)
+[ info ] [ PARAM ] array (
+  'iv' => 'lsSiPbkszxYZV6jGe/MMIQ==',
+  'encryptedData' => 'EHfVmr+dIb3D+ewwNRDQt+Kz0Ri1V75Gwap+QeIcf2WeCrGWL9U4KkleAImj67n7sXu/jqoAB6oEeZQVfUovNnHyM5JNs2VxeqWeFKtuXCdQg9EYYHrAM2d6zAMcugcNAI5Gsi9A5aXdSZYK/2EGfpaE75ULwLnuoogmbhqvI1RCTrllI2nxS3bpsrBq7YgWPDpG+zGUZ6tFqOqnkq9FAFAxREjcDsuzbd4axdCpNRN018y8vqELykQlhee+WiRormDLIfd5H6EzPrGEMtz/YOABdK8Xsj//R931fbnSNje0GXqEW5pAJTaw6jw8X24bXutYdRHT/ukhVmqX8jhFvrlEH5ojARIroixRkwLvHlmUVBQiOO0HgRNiVWBMNoHkkATjjnDGhXapinSUmlMZJ8nG76z7MEo5bbRGsatc7LG1G2fqEjd8mJKT2RvqSqaDWcdqWR5E/IBI09bl7nwc7feAy0CyOE/mims+fKL8yQg=',
+)
+[ info ] [ RUN ] app\api\controller\Users->adduser[ D:\xampp\htdocs\yqb\application\api\controller\Users.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File

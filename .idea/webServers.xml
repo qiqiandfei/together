@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a945e324-fbf5-4f6c-8b3b-e12043a130cf" name="yqb" url="http://39.106.119.243">
+        <fileTransfer host="39.106.119.243" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveCommand="PWD" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,1071 @@
+---------------------------------------------------------------
+[ 2019-03-04T11:12:06+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=13783
+[运行时间：0.022820s] [吞吐率：43.82req/s] [内存消耗：1,451.90kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '13783',
+)
+[ info ] [ RUN ] app\api\controller\Activity->index[ D:\xampp\htdocs\yqb\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T11:12:07+08:00 ] 127.0.0.1 GET localhost/yqb/public/?XDEBUG_SESSION_START=13783
+[运行时间：0.020814s] [吞吐率：48.04req/s] [内存消耗：1,451.94kb] [文件加载：35]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=XDEBUG_ECLIPSE',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '13783',
+)
+[ info ] [ RUN ] app\api\controller\Activity->index[ D:\xampp\htdocs\yqb\application\api\controller\Activity.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T11:13:59+08:00 ] 0.0.0.0 GET localhost/yqb/public/
+[运行时间：0.045017s] [吞吐率：22.21req/s] [内存消耗：1,596.11kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=13783',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T13:22:56+08:00 ] 0.0.0.0 GET localhost/yqb/public/
+[运行时间：0.031119s] [吞吐率：32.13req/s] [内存消耗：1,609.02kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected '['[D:\xampp\htdocs\yqb\application\home\controller\WeChat.php:17]
+---------------------------------------------------------------
+[ 2019-03-04T13:23:55+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=18529
+[运行时间：0.047494s] [吞吐率：21.06req/s] [内存消耗：1,609.41kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '18529',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected '['[D:\xampp\htdocs\yqb\application\home\controller\WeChat.php:17]
+---------------------------------------------------------------
+[ 2019-03-04T13:24:43+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=10082
+[运行时间：0.033219s] [吞吐率：30.10req/s] [内存消耗：1,619.73kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=18529',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '10082',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected '['[D:\xampp\htdocs\yqb\application\home\controller\WeChat.php:47]
+---------------------------------------------------------------
+[ 2019-03-04T13:25:01+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=14865
+[运行时间：0.039156s] [吞吐率：25.54req/s] [内存消耗：1,619.73kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=10082',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '14865',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected '['[D:\xampp\htdocs\yqb\application\home\controller\WeChat.php:47]
+---------------------------------------------------------------
+[ 2019-03-04T13:25:44+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=14865
+[运行时间：16.226376s] [吞吐率：0.06req/s] [内存消耗：1,470.56kb] [文件加载：34]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=14865',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '14865',
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T13:26:25+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=11026
+[运行时间：0.039780s] [吞吐率：25.14req/s] [内存消耗：1,620.30kb] [文件加载：40]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=14865',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '11026',
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Trying to get property of non-object[D:\xampp\htdocs\yqb\application\home\controller\WeChat.php:17]
+---------------------------------------------------------------
+[ 2019-03-04T13:28:32+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=11026
+[运行时间：14.138301s] [吞吐率：0.07req/s] [内存消耗：1,470.47kb] [文件加载：34]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=11026',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '11026',
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T13:30:55+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=10072
+[运行时间：128.923423s] [吞吐率：0.01req/s] [内存消耗：1,470.52kb] [文件加载：34]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=11026',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '10072',
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T13:31:11+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=13780
+[运行时间：9.914429s] [吞吐率：0.10req/s] [内存消耗：1,469.41kb] [文件加载：34]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=10072',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '13780',
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T13:31:46+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=19201
+[运行时间：32.217611s] [吞吐率：0.03req/s] [内存消耗：1,470.07kb] [文件加载：34]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=13780',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '19201',
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T13:35:09+08:00 ] 0.0.0.0 GET localhost/yqb/public/
+[运行时间：0.022131s] [吞吐率：45.19req/s] [内存消耗：1,468.27kb] [文件加载：34]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=19201',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T13:42:16+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=16623
+[运行时间：6.145721s] [吞吐率：0.16req/s] [内存消耗：1,469.35kb] [文件加载：34]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=19201',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '16623',
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T13:42:47+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=19908
+[运行时间：7.048101s] [吞吐率：0.14req/s] [内存消耗：1,469.30kb] [文件加载：34]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16623',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '19908',
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T14:57:03+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=15423
+[运行时间：5.953611s] [吞吐率：0.17req/s] [内存消耗：1,814.13kb] [文件加载：40]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '15423',
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T15:43:06+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=18904
+[运行时间：0.025138s] [吞吐率：39.78req/s] [内存消耗：1,785.18kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=15423',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '18904',
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T15:43:40+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=11362
+[运行时间：0.026386s] [吞吐率：37.90req/s] [内存消耗：1,785.25kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=18904',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '11362',
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T15:44:24+08:00 ] 0.0.0.0 GET localhost/yqb/public/
+[运行时间：0.025052s] [吞吐率：39.92req/s] [内存消耗：1,785.01kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=11362',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T16:56:53+08:00 ] 0.0.0.0 GET localhost/yqb/public/index.php/
+[运行时间：0.049022s] [吞吐率：20.40req/s] [内存消耗：1,791.92kb] [文件加载：40]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T16:57:00+08:00 ] 0.0.0.0 GET localhost/yqb/public/
+[运行时间：0.027016s] [吞吐率：37.02req/s] [内存消耗：1,792.20kb] [文件加载：40]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'purpose' => 'prefetch',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T19:29:26+08:00 ] 0.0.0.0 GET localhost/yqb/public/
+[运行时间：0.033084s] [吞吐率：30.23req/s] [内存消耗：1,792.20kb] [文件加载：40]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'purpose' => 'prefetch',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T19:29:45+08:00 ] 0.0.0.0 GET localhost/yqb/public/
+[运行时间：0.029802s] [吞吐率：33.55req/s] [内存消耗：1,791.91kb] [文件加载：40]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T19:32:43+08:00 ] 0.0.0.0 GET localhost/yqb/public/index.php/home/wechat/index
+[运行时间：0.434777s] [吞吐率：2.30req/s] [内存消耗：1,589.27kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'wechat',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T19:40:02+08:00 ] 0.0.0.0 GET localhost/yqb/public/?XDEBUG_SESSION_START=16305
+[运行时间：0.033529s] [吞吐率：29.82req/s] [内存消耗：1,792.11kb] [文件加载：40]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '16305',
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T19:46:19+08:00 ] 0.0.0.0 GET localhost/yqb/public/
+[运行时间：0.038911s] [吞吐率：25.70req/s] [内存消耗：1,792.24kb] [文件加载：40]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/yqb/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16305',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T20:09:49+08:00 ] 0.0.0.0 GET localhost/yqb/public/
+[运行时间：0.438386s] [吞吐率：2.28req/s] [内存消耗：1,676.77kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16305',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T20:15:17+08:00 ] 0.0.0.0 GET localhost/yqb/public/
+[运行时间：0.443370s] [吞吐率：2.26req/s] [内存消耗：1,677.13kb] [文件加载：42]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'purpose' => 'prefetch',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049; XDEBUG_SESSION=16305',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T20:41:47+08:00 ] 0.0.0.0 GET localhost/yqb/public/index.php?s=/home/wechat/index
+[运行时间：0.437437s] [吞吐率：2.29req/s] [内存消耗：1,592.26kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wechat',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T20:59:14+08:00 ] 0.0.0.0 GET localhost/yqb/public/index.php?s=/home/wechat/index
+[运行时间：0.442002s] [吞吐率：2.26req/s] [内存消耗：1,592.61kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wechat',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T21:01:32+08:00 ] 0.0.0.0 GET localhost/yqb/public/home/wechat/index
+[运行时间：0.438045s] [吞吐率：2.28req/s] [内存消耗：1,589.60kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wechat',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T21:03:12+08:00 ] 0.0.0.0 GET localhost/yqb/public/home
+[运行时间：0.436321s] [吞吐率：2.29req/s] [内存消耗：1,583.15kb] [文件加载：37]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T21:03:28+08:00 ] 0.0.0.0 GET localhost/yqb/public/home/wechat
+[运行时间：0.434966s] [吞吐率：2.30req/s] [内存消耗：1,589.30kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wechat',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T21:04:06+08:00 ] 0.0.0.0 GET localhost/yqb/public/home/WeChat
+[运行时间：0.432624s] [吞吐率：2.31req/s] [内存消耗：1,929.60kb] [文件加载：44]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'WeChat',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T21:04:27+08:00 ] 0.0.0.0 GET localhost/yqb/public/home/WeChat/index
+[运行时间：0.023861s] [吞吐率：41.91req/s] [内存消耗：1,784.91kb] [文件加载：39]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'WeChat',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\WeChat->index[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-04T21:04:44+08:00 ] 0.0.0.0 GET localhost/yqb/public/home/WeChat/getUserOpenId
+[运行时间：0.431687s] [吞吐率：2.32req/s] [内存消耗：1,938.53kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'WeChat',
+    2 => 'getUserOpenId',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\WeChat->getUserOpenId[ D:\xampp\htdocs\yqb\application\home\controller\WeChat.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: code[D:\xampp\htdocs\yqb\application\home\controller\WeChat.php:49]
+---------------------------------------------------------------
+[ 2019-03-04T21:15:30+08:00 ] 0.0.0.0 GET localhost/yqb/public/home/wechat/index?XDEBUG_SESSION_START=16839
+[运行时间：0.065485s] [吞吐率：15.27req/s] [内存消耗：1,589.51kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\yqb\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wechat',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'rememberpwd=1; user=xuli; pwd=qaz.wsx.1234; code=20049',
+)
+[ info ] [ PARAM ] array (
+  'XDEBUG_SESSION_START' => '16839',
+)
+[ info ] [ LOG ] INIT File
