@@ -39,7 +39,7 @@ class ActivityLabel extends Model
             )->save(['id' => $id,
                     'activity_id' => $_REQUEST['activityId'],
                     'label_name' => $_REQUEST['labelName'],
-                    'creator' => $user['id']
+                    'creator' => $user['data']['id']
                     ]);
             if($resval)
             {

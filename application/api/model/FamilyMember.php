@@ -36,11 +36,11 @@ class FamilyMember extends Model
                 ]
             )->save(['id' => $id,
                     'family_id' => $_REQUEST['familyid'],
-                    'user_id' => $user['id'],
+                    'user_id' => $user['data']['id'],
                     'member_title' => $_REQUEST['membertitle'],
                     'is_head' => $_REQUEST['ishead'],
                     'is_delete' => 0,
-                    'creator' => $user['id']
+                    'creator' => $user['data']['id']
                 ]);
             if($resval)
             {

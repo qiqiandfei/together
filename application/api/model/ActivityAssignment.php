@@ -51,7 +51,7 @@ class ActivityAssignment extends Model
                 'assignment_goal' => $_REQUEST['assignmentGoal'],
                 'receive_user_id' => $_REQUEST['receiveUserId'],
                 'assignment_state' => $assignment_state,
-                'creator' => $user['id']
+                'creator' => $user['data']['id']
             ]);
 
             if($resval)
@@ -121,7 +121,7 @@ class ActivityAssignment extends Model
                         'assignment_goal' => $_REQUEST['assignment_goal'],
                         'receive_user_id' => $_REQUEST['receive_user_id'],
                         'assignment_state' => $assignment_state,
-                        'operator' => $user['id'],
+                        'operator' => $user['data']['id'],
                         'operator_time'=> date('Y-m-d H:i:s', time())
                         ]);
 

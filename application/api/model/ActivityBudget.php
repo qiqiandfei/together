@@ -43,7 +43,7 @@ class ActivityBudget extends Model
                     'budget_purpose' => $param['budgetPurpose'],
                     'budget_amount' => $param['budgetAmount'],
                     'actual_amount' => $param['actualAmount'],
-                    'creator' => $user['id']
+                    'creator' => $user['data']['id']
                     ]);
             if($resval)
             {

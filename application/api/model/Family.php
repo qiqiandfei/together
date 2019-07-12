@@ -44,7 +44,7 @@ class Family extends Model
                     'family_name' => $_REQUEST['family_name'],
                     'contact_number' => $_REQUEST['contact_number'],
                     'member_count' => $_REQUEST['member_count'],
-                    'creator' => $user['id']
+                    'creator' => $user['data']['id']
                     ]);
             if($resval)
             {

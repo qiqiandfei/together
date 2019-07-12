@@ -65,7 +65,7 @@ class Activity extends Model
                     'allow_edit' => $param['allowEdit'],
                     'activity_state' => 0,
                     'is_delete' => 0,
-                    'creator' => $user['id']
+                    'creator' => $user['data']['id']
                     ]);
 
             if($resval)
@@ -285,7 +285,7 @@ class Activity extends Model
                         'brief_introduction' => $_REQUEST['brief_introduction'],
                         'remark' => $_REQUEST['remark'],
                         'allow_edit' => $_REQUEST['allow_edit'],
-                        'operator' => $user['id'],
+                        'operator' => $user['data']['id'],
                         'operate_time'=> date('Y-m-d H:i:s', time())
                         ]);
             if($resval)

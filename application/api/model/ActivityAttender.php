@@ -36,7 +36,7 @@ class ActivityAttender extends Model
             //验证昵称
             if(empty($_REQUEST['nick_name']))
             {
-                $nickname = $user['nick_name'];
+                $nickname = $user['data']['nick_name'];
             }
             else
                 $nickname = $_REQUEST['nick_name'];
@@ -51,7 +51,7 @@ class ActivityAttender extends Model
             }
             else
             {
-                $contactNumber = $user['mobile'];
+                $contactNumber = $user['data']['mobile'];
             }
 
 
@@ -63,7 +63,7 @@ class ActivityAttender extends Model
                 'family_member_id' => $user['id'],
                 'nick_name' => $nickname,
                 'contact_number' => $contactNumber,
-                'creator'=>$user['id']
+                'creator'=>$user['data']['id']
             ]);
             $obj = $aa::get($id);
             if($obj)
@@ -104,7 +104,7 @@ class ActivityAttender extends Model
                          ->where('family_member_id',$_REQUEST['family_member_id'])
                          ->where('attend_state',1)
                          ->update(['attend_state'=>2,
-                                   'operator' => $user['id'],
+                                   'operator' => $user['data']['id'],
                                    'operate_time' => date('Y-m-d H:i:s', time())
                                     ]);
 
@@ -151,12 +151,12 @@ class ActivityAttender extends Model
             }
             else
             {
-                $contactNumber = $user['mobile'];
+                $contactNumber = $user['data']['mobile'];
             }
             //验证昵称
             if(empty($_REQUEST['nick_name']))
             {
-                $nickname = $user['nick_name'];
+                $nickname = $user['data']['nick_name'];
             }
             else
                 $nickname = $_REQUEST['nick_name'];
@@ -167,7 +167,7 @@ class ActivityAttender extends Model
                           ->where('attend_state',1)
                           ->update(['nick_name' => $nickname,
                             'contact_number'=>$contactNumber,
-                            'operator' => $user['id'],
+                            'operator' => $user['data']['id'],
                             'operate_time' => date('Y-m-d H:i:s', time())
                         ]);
 

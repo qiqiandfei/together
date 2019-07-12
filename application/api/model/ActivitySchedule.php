@@ -31,7 +31,7 @@ class ActivitySchedule extends Model
             $user = model('user')->getUserInfo_token($_REQUEST['token']);
 
             if(empty($_REQUEST['leaderId']))
-                $leaderId = $user['id'];
+                $leaderId = $user['data']['id'];
             else
                 $leaderId = $_REQUEST['leaderId'];
 
@@ -71,7 +71,7 @@ class ActivitySchedule extends Model
                     'depart_latitude' => $_REQUEST['departLatitude'],
                     'destination_longitude' => $_REQUEST['destinationLongitude'],
                     'destination_latitude' => $_REQUEST['destinationLatitude'],
-                    'creator'=>$user['id']
+                    'creator'=>$user['data']['id']
                     ]);
             if($resval)
             {
@@ -79,7 +79,7 @@ class ActivitySchedule extends Model
                 if($obj)
                 {
                     //新增明细
-                    $detial = model('ActivityScheduleDetail')->addScheduleDetail($_REQUEST['activityId'],$id,$_REQUEST['scheduleContent'],$user['id']);
+                    $detial = model('ActivityScheduleDetail')->addScheduleDetail($_REQUEST['activityId'],$id,$_REQUEST['scheduleContent'],$user['data']['id']);
                     if($detial)
                     {
                         $as->commit();
@@ -179,7 +179,7 @@ class ActivitySchedule extends Model
             $user = model('user')->getUserInfo_token($_REQUEST['token']);
 
             if(empty($_REQUEST['leaderId']))
-                $leaderId = $user['id'];
+                $leaderId = $user['data']['id'];
             else
                 $leaderId = $_REQUEST['leaderId'];
 
@@ -219,7 +219,7 @@ class ActivitySchedule extends Model
                         'depart_latitude' => $_REQUEST['departLatitude'],
                         'destination_longitude' => $_REQUEST['destinationLongitude'],
                         'destination_latitude' => $_REQUEST['destinationLatitude'],
-                        'operator'=> $user['id'],
+                        'operator'=> $user['data']['id'],
                         'operator_time'=> date('Y-m-d H:i:s', time())
             ]);
             if($resval)

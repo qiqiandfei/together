@@ -50,7 +50,7 @@ class ActivityBudgetPayment extends Model
                 'user_id' => $_REQUEST['user_id'],
                 'payment_channel' => $_REQUEST['payment_channel'],
                 'payment_amount' => $_REQUEST['payment_amount'],
-                'creator' => $user['id']
+                'creator' => $user['data']['id']
             ]);
             if($resval)
             {
