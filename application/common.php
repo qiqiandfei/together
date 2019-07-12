@@ -99,10 +99,10 @@ use think\Validate;
             if(Cache::store('redis')->has($openid))
             {
                 Cache::store('redis')->rm($openid);
-                Cache::store('redis')->set($openid,array('logintoken'=>'','sessionkey'=>$sessionkey),7200);
+                Cache::store('redis')->set($openid,$sessionkey,7200);
             }
             else
-                Cache::store('redis')->set($openid,array('logintoken'=>'','sessionkey'=>$sessionkey),7200);
+                Cache::store('redis')->set($openid,$sessionkey,7200);
             return $openid;
         }
 
@@ -174,9 +174,9 @@ use think\Validate;
      * <li>-41005: base64加密失败</li>
      * <li>-41016: base64解密失败</li>
      */
-    function decryptData($encryptedData, $iv, &$data )
+    function decryptData($encryptedData, $iv, $openid, &$data)
     {
-        $sessionKey = Cache::store('redis')->get('openid');
+        $sessionKey = Cache::store('redis')->get($openid);
 
         $appid = Config::get('wechat')['XCX_AppID'];
 
