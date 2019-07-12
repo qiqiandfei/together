@@ -29,10 +29,11 @@ class User extends Controller
         {
             $encryptedData = $_REQUEST['encryptedData'];
             $iv = $_REQUEST['iv'];
-            $decryptres = decryptData($encryptedData, $iv, $data );
+            $openid = $_REQUEST['openid'];
+            $decryptres = decryptData($encryptedData, $iv, $openid,$data);
             if ($decryptres == "OK")
             {
-                $user = model('User');
+                $user = new \app\api\model\User();
                 $res = $user->addUser($data,$mobileNumber);
                 json($res['code'],$res['data'],$res['message']);
 
@@ -63,7 +64,7 @@ class User extends Controller
         $reqtoken = $_REQUEST['reqToken'];
         $logintoken = $_REQUEST['accessToken'];
 
-        $checkres = check_request($reqtoken,$ranstr);
+        $checkres = check_req_login($reqtoken,$ranstr,$logintoken);
         //验证请求是否合法
         if($checkres['code'] == 1000)
         {

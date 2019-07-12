@@ -203,7 +203,9 @@ class ActivityAttender extends Model
         try
         {
             $users = [];
-            $userids = ActivityAttender::field('family_member_id')->where('activity_id','=',$_REQUEST['activity_id'])->select();
+            $userids = ActivityAttender::field('family_member_id')
+                ->where(['activity_id'=>$_REQUEST['activity_id'],'attend_state'=>1])
+                ->select();
             foreach($userids as $userid)
             {
                 $user = User::get($userid);

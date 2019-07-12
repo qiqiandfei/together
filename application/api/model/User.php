@@ -12,55 +12,82 @@ namespace app\api\model;
 use Snowflake;
 use think\Cache;
 use think\Model;
+use think\Request;
 
 class User extends Model
 {
+    /**
+     * Notes:创建用户
+     * @param $param
+     * @param $mobileNumber
+     * @return array
+     * @throws \think\exception\PDOException
+     * author: Fei
+     * Time: 2019/7/12 14:21
+     */
     public function addUser($param,$mobileNumber)
     {
+        $user = new User();
+        $user->startTrans();
         try
         {
-            $user = new User();
+            $request = Request::instance();
             $id = Snowflake::getsnowId();
             $user->save(['id' => $id,
                         'mobile' => $mobileNumber,
                         'nick_name' => $param['nickName'],
-                        'password' => $param['123456'],
-                        'mina_openid' => $param['openid'],
-                        'union_id' => "",
+                        'password' => "",
+                        'mina_openid' => $param['openId'],
+                        'union_id' => $param['unionId'],
                         'user_type' => 0,
-                        'sex' => $param['sex'],
-                        'real_name' => $param[''],
+                        'sex' => $param['gender'],
+                        'real_name' => "",
                         'last_login_time' => date('Y-m-d H:i:s', time()),
-                        'last_login_ip' => $param[''],
-                        'head_url' => $param['headimgurl'],
+                        'last_login_ip' => $request->ip(),
                         'creator' => $id,
-                        'operator' => $id
+
             ]);
             $objuser = $user::get($id);
             if($objuser)
             {
-                $usertoken = Cache::store('redis')->get($param['openid']);
-                $logintoken = aesencrypt($id);
-                Cache::store('redis')->set($param['openid'],array('logintoken'=>$logintoken,'sessionkey'=>$usertoken['sessionkey']),7200);
-                return array('code' => 1000,
-                    'data' => array('logintoken'=>$logintoken,'userdata'=>$user->data),
-                    'message'=> '用户注册成功！');
+                //新增UserOfficialAccount表
+                if(model('UserOfficialAccount')->addUser($id,$param))
+                {
+                    $user->commit();
+                    $logintoken = aesencrypt($id);
+
+                    //缓存用户登录token
+                    Cache::store('redis')->set($logintoken,$objuser->data,7200);
+                    return array('code' => 1000,
+                        'data' => array('logintoken'=>$logintoken,'userdata'=>$user->data),
+                        'message'=> '用户注册成功！');
+                }
+                else
+                {
+                    $user->rollback();
+                    return array('code' => 3000,
+                        'data' => array(),
+                        'message'=> '用户注册失败，请稍后再试！');
+                }
             }
             else
             {
+                $user->rollback();
                 return array('code' => 3000,
                     'data' => array(),
                     'message'=> '用户注册失败，请稍后再试！');
             }
-
         }
         catch(\Exception $e)
         {
+            $user->rollback();
             return array('code' => 2000,
                 'data' => array(),
                 'message'=> $e->getMessage());
         }
     }
+
+
 
     /**
      * Notes:判断用户是否存在
@@ -72,8 +99,7 @@ class User extends Model
      */
     public function isUserexists($mina_openid)
     {
-        $user = model('User');
-        $res = $user::get($mina_openid);
+        $res = User::get($mina_openid);
         if($res)
             return true;
         else
@@ -90,10 +116,9 @@ class User extends Model
      */
     public function getUserId($openid)
     {
-        $user = model('User');
-        $res = $user::get($openid);
+        $res = User::get($openid);
         if($res)
-            return $res['id'];
+            return $res->data['id'];
         else
             return 0;
     }
@@ -108,8 +133,7 @@ class User extends Model
      */
     public function getUserInfo_userid($userid)
     {
-        $user = model('User');
-        $res = $user::get($userid);
+        $res = User::get($userid);
         if($res)
             return $res;
         else
@@ -126,8 +150,7 @@ class User extends Model
      */
     public function getUserInfo_openid($openid)
     {
-        $user = model('User');
-        $res = $user::get($openid);
+        $res = User::get($openid);
         if($res)
             return $res;
         else
@@ -143,12 +166,39 @@ class User extends Model
      */
     public function getUserInfo_token($logintoken)
     {
-        $userid = aesdecrypt($logintoken);
-        $res = $this->getUserInfo_openid($userid);
-        if($res)
-            return array('code'=>1000,'data'=>$res->data,'message'=>'获取用户信息成功！');
+        if(Cache::store('redis')->has($logintoken))
+        {
+            $user = Cache::store('redis')->get($logintoken);
+            if($user)
+                return array('code'=>1000,'data'=>$user->data,'message'=>'获取用户信息成功！');
+            else
+                return array('code'=>5000,'data'=>array(),'message'=>'获取用户信息失败！');
+        }
         else
+        {
             return array('code'=>5000,'data'=>array(),'message'=>'获取用户信息失败！');
+        }
+
+    }
+
+    /**
+     * Notes:更新最后登录信息
+     * @param $token
+     * @throws \think\exception\DbException
+     * author: Fei
+     * Time: 2019/7/12 13:05
+     */
+    public function updLastLoginInfo($token)
+    {
+        $request = Request::instance();
+        $userid = aesdecrypt($token);
+        $res = $this->getUserInfo_userid($userid);
+        $res->where('id',$res->data['id'])->update(
+            [
+                'last_login_time'=> date('Y-m-d H:i:s', time()),
+                'last_login_ip' => $request->ip()
+            ]
+        );
     }
 
     public function getinfo()

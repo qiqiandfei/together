@@ -68,7 +68,6 @@ class Activity extends Model
                     'creator' => $user['id']
                     ]);
 
-
             if($resval)
             {
                 $objactivity = $activity::get($id);

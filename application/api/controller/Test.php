@@ -30,9 +30,20 @@ class Test extends  Controller
 
     public function sendSmsCode()
     {
-
-        $res = send_smscode('15011211993');
-        json($res['code'],$res['data'],$res['message']);
+        $mobileNumber = $_REQUEST['mobileNumber'];
+        $reqToken = $_REQUEST['reqToken'];
+        $ranStr = $_REQUEST['ranStr'];
+        $chkres = check_request($reqToken,$ranStr);
+        //验证请求是否合法
+        if($chkres['code'] == 1000)
+        {
+            $res = send_smscode($mobileNumber);
+            json($res['code'],$res['data'],$res['message']);
+        }
+        else
+        {
+            json($chkres['code'],$chkres['data'],$chkres['message']);
+        }
 
     }
 

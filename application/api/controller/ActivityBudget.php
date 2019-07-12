@@ -1,8 +1,8 @@
 <?php
 /**
  * Create by: yufei
- * Date: 2019/7/12
- * Time: 9:29
+ * Date: 2019/7/9
+ * Time: 17:26
  * Copyright © 2019年 Fei. All rights reserved.
  */
 
@@ -11,14 +11,15 @@ namespace app\api\controller;
 
 use think\Controller;
 
-class ActivityBudgetPayment extends Controller
+class ActivityBudget extends Controller
 {
+
     /**
-     * Notes:新增花费明细
+     * Notes:新增花费
      * author: Fei
      * Time: 2019/7/12 9:31
      */
-    public function abpAdd()
+    public function abAdd()
     {
         $param = $_REQUEST;
         //加密前参数
@@ -33,7 +34,7 @@ class ActivityBudgetPayment extends Controller
             //实例化模型
             $model = new \app\api\model\ActivityBudget();
             //新增活动预算
-            $res = $model->abpAdd();
+            $res = $model->abAdd($param);
             json($res['code'],$res['data'],$res['message']);
         }
         else

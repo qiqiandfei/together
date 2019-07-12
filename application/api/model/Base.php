@@ -24,20 +24,25 @@ class Base
     {
         $openid = get_openid($code);
         $user = model('User');
-        $usertoken = Cache::store('redis')->get($openid);
+
+        //如果用户存在则更新登录token；否则新增用户
         if($user->isUserexists($openid))
         {
-            $userinfo = model('user')->getUserInfo_openid($openid);
+            $userinfo = $user->getUserInfo_openid($openid);
             $logintoken = aesencrypt($userinfo['id']);
-            Cache::store('redis')->set($openid,array('logintoken'=>$logintoken,'sessionkey'=>$usertoken['sessionkey']),7200);
-            $usertoken = Cache::store('redis')->get($openid);
-            return array('code'=>1000,'data'=> array('logintoken'=>$usertoken['logintoken'],'userdata'=>$userinfo),'message'=>'登录成功！');
+
+            //更新缓存中的数据，添加登录token
+            Cache::store('redis')->set($logintoken,$userinfo->data,7200);
+
+            //更新最后登录信息
+            $user->updLastLoginInfo($logintoken);
+
+            return array('code'=>1000,'data'=> array('logintoken'=>$logintoken,'userdata'=>$userinfo),'message'=>'登录成功！');
         }
         else
         {
             return array('code'=>2001,
-                'data'=>array('openid'=>$openid,
-                              'sessionkey'=>$usertoken['sessionkey']),
+                'data'=>array('openid'=>$openid),
                 'message'=>'用户不存在，请调用/api/User/addUser接口！');
         }
 
