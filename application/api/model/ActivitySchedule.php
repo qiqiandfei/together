@@ -100,7 +100,7 @@ class ActivitySchedule extends Model
                     $as->rollback();
                     return array('code' => 3000,
                         'data' => array(),
-                        'message'=> '新增行程失败，请稍后再试！');
+                        'message'=> $as->error);
                 }
             }
             else

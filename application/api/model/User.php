@@ -31,6 +31,7 @@ class User extends Model
         $user->startTrans();
         try
         {
+            $info = Cache::store('redis')->get($param['openId']);
             $request = Request::instance();
             $id = Snowflake::getsnowId();
             $user->save(['id' => $id,
@@ -38,7 +39,7 @@ class User extends Model
                         'nick_name' => $param['nickName'],
                         'password' => "",
                         'mina_openid' => $param['openId'],
-                        'union_id' => $param['unionId'],
+                        'union_id' => $info['unionid'],
                         'user_type' => 0,
                         'sex' => $param['gender'],
                         'real_name' => "",
@@ -51,11 +52,11 @@ class User extends Model
             if($objuser)
             {
                 //新增UserOfficialAccount表
-                if(model('UserOfficialAccount')->addUser($id,$param))
+                $errormsg = model('UserOfficialAccount')->addUser($id,$param,$info['unionid']);
+                if(empty($errormsg))
                 {
                     $user->commit();
                     $logintoken = aesencrypt($id);
-
                     //缓存用户登录token
                     Cache::store('redis')->set($logintoken,$objuser->data,7200);
                     return array('code' => 1000,
@@ -67,7 +68,7 @@ class User extends Model
                     $user->rollback();
                     return array('code' => 3000,
                         'data' => array(),
-                        'message'=> '用户注册失败，请稍后再试！');
+                        'message'=> $errormsg);
                 }
             }
             else
@@ -75,7 +76,7 @@ class User extends Model
                 $user->rollback();
                 return array('code' => 3000,
                     'data' => array(),
-                    'message'=> '用户注册失败，请稍后再试！');
+                    'message'=> $user->error);
             }
         }
         catch(\Exception $e)

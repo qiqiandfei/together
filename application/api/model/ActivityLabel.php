@@ -25,9 +25,9 @@ class ActivityLabel extends Model
         try
         {
             $user = model('user')->getUserInfo_token($_REQUEST['token']);
-            $family = new Family();
+            $label = new ActivityLabel();
             $id = Snowflake::getsnowId();
-            $resval = $family->validate(
+            $resval = $label->validate(
                 [
                     'label_name' => 'require',
                     'activity_id'=>'require',
@@ -43,7 +43,7 @@ class ActivityLabel extends Model
                     ]);
             if($resval)
             {
-                $obj = $family::get($id);
+                $obj = $label::get($id);
                 if($obj)
                 {
                     return array('code' => 1000,
@@ -54,14 +54,14 @@ class ActivityLabel extends Model
                 {
                     return array('code' => 3000,
                         'data' => array(),
-                        'message'=> '添加活动标签失败，请稍后再试！');
+                        'message'=> $label->error);
                 }
             }
             else
             {
                 return array('code' => 4001,
                     'data' => array(),
-                    'message'=> $family->error);
+                    'message'=> $label->error);
             }
 
         }

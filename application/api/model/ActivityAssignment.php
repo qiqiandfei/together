@@ -67,7 +67,7 @@ class ActivityAssignment extends Model
                 {
                     return array('code' => 3000,
                         'data' => array(),
-                        'message'=> '创建活动任务失败，请稍后再试！');
+                        'message'=> $task->error);
                 }
             }
             else

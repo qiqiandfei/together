@@ -65,7 +65,7 @@ class ActivityBudgetPayment extends Model
                 {
                     return array('code' => 3000,
                         'data' => array(),
-                        'message'=> '创建活动花费明细失败，请稍后再试！');
+                        'message'=> $abp->error);
                 }
             }
             else

@@ -23,7 +23,7 @@ class UserOfficialAccount extends Model
      * author: Fei
      * Time: 2019/7/12 13:23
      */
-    public function addUser($id,$param)
+    public function addUser($id,$param,$unionid)
     {
         $user = new UserOfficialAccount();
         try
@@ -31,7 +31,7 @@ class UserOfficialAccount extends Model
             $user->startTrans();
             $user->save(['id' => $id,
                 'openid' => $param['openId'],
-                'union_id' => $param['unionId'],
+                'union_id' => $unionid,
                 'nick_name' => $param['nickName'],
                 'head_portrait' => $param['avatarUrl'],
                 'sex' => $param['gender'],
@@ -45,18 +45,18 @@ class UserOfficialAccount extends Model
             if($objuser)
             {
                 $user->commit();
-                return true;
+                return $user->error;
             }
             else
             {
                 $user->rollback();
-                return false;
+                return $user->error;
             }
         }
         catch (\Exception $e)
         {
             $user->rollback();
-            return false;
+            return $user->error;
         }
     }
 }

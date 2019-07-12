@@ -76,7 +76,7 @@ class ActivityAttender extends Model
             {
                 return array('code' => 3000,
                     'data' => array(),
-                    'message'=> '新增活动用户失败，请稍后再试！');
+                    'message'=> $aa->error);
             }
 
         }

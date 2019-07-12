@@ -55,7 +55,7 @@ class FamilyMember extends Model
                 {
                     return array('code' => 3000,
                         'data' => array(),
-                        'message'=> '创建家庭失败，请稍后再试！');
+                        'message'=> $member->error);
                 }
             }
             else

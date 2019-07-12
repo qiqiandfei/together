@@ -106,4 +106,23 @@ class Test extends  Controller
         $res = $model->getinfo();
         json($res['code'],$res['data'],$res['message']);
     }
+
+    public function addUser()
+    {
+        $encryptedData = $_REQUEST['encryptedData'];
+        $iv = $_REQUEST['iv'];
+        $openid = $_REQUEST['openid'];
+        $decryptres = decryptData($encryptedData, $iv, $openid,$data);
+        if ($decryptres == "OK")
+        {
+            $user = new \app\api\model\User();
+            $res = $user->addUser($data,"18797093035");
+            json($res['code'],$res['data'],$res['message']);
+
+        }
+        else
+        {
+            json(7000,array(),$decryptres);
+        }
+    }
 }
