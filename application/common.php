@@ -96,13 +96,14 @@ use think\Validate;
         {
             $openid = json_decode($objSession)->openid;
             $sessionkey = json_decode($objSession)->session_key;
+            $unionid = json_decode($objSession)->unionid;
             if(Cache::store('redis')->has($openid))
             {
                 Cache::store('redis')->rm($openid);
-                Cache::store('redis')->set($openid,$sessionkey,7200);
+                Cache::store('redis')->set($openid,array('sessionkey'=>$sessionkey,'unionid'=>$unionid),300);
             }
             else
-                Cache::store('redis')->set($openid,$sessionkey,7200);
+                Cache::store('redis')->set($openid,array('sessionkey'=>$sessionkey,'unionid'=>$unionid),300);
             return $openid;
         }
 
@@ -176,7 +177,8 @@ use think\Validate;
      */
     function decryptData($encryptedData, $iv, $openid, &$data)
     {
-        $sessionKey = Cache::store('redis')->get($openid);
+        $info = Cache::store('redis')->get($openid);
+        $sessionKey = $info['sessionkey'];
 
         $appid = Config::get('wechat')['XCX_AppID'];
 
