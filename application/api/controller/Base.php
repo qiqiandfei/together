@@ -114,7 +114,8 @@ class Base
     {
         $ranStr = $_REQUEST['ranStr'];
         $reqToken = $_REQUEST['reqToken'];
-        $chkres = check_request($reqToken,$ranStr);
+        $logintoken = $_REQUEST['token'];
+        $chkres = check_req_login($reqToken,$ranStr,$logintoken);
         //验证请求是否合法
         if($chkres['code'] == 1000)
         {

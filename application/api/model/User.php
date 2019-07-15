@@ -31,20 +31,18 @@ class User extends Model
         $user->startTrans();
         try
         {
-            $info = Cache::store('redis')->get($param['openId']);
-            $request = Request::instance();
             $id = Snowflake::getsnowId();
             $user->save(['id' => $id,
                         'mobile' => $mobileNumber,
                         'nick_name' => $param['nickName'],
                         'password' => "",
                         'mina_openid' => $param['openId'],
-                        'union_id' => $info['unionid'],
+                        'union_id' => "",
                         'user_type' => 0,
                         'sex' => $param['gender'],
                         'real_name' => "",
                         'last_login_time' => date('Y-m-d H:i:s', time()),
-                        'last_login_ip' => $request->ip(),
+                        'last_login_ip' => get_cip(),
                         'creator' => $id,
 
             ]);
@@ -52,7 +50,7 @@ class User extends Model
             if($objuser)
             {
                 //新增UserOfficialAccount表
-                $errormsg = model('UserOfficialAccount')->addUser($id,$param,$info['unionid']);
+                $errormsg = model('UserOfficialAccount')->addUser($id,$param);
                 if(empty($errormsg))
                 {
                     $user->commit();
@@ -88,6 +86,53 @@ class User extends Model
         }
     }
 
+    /**
+     * Notes:用户信息编辑
+     * @return array
+     * author: Fei
+     * Time: 2019/7/15 11:15
+     */
+    public function editUser()
+    {
+        try
+        {
+            $userdata = $this->getUserInfo_token($_REQUEST['accessToken']);
+            $user = new User();
+            $resval = $user->validate(
+                    [
+                        'real_name'  => 'require',
+                        'nick_name'   => 'require',
+                    ],
+                    [
+                        'real_name.require' => '真实姓名不能为空！',
+                        'nick_name.require' => '昵称不能为空！',
+                    ]
+            )->where('id',$userdata['id'])->update([
+                  'real_name' => $_REQUEST['relName'],
+                  'nick_name' => $_REQUEST['nickName'],
+                  'sex' => $_REQUEST['sex']
+              ]);
+            if($resval)
+            {
+
+                return array('code' => 1000,
+                    'data' => $user['data'],
+                    'message'=> '编辑用户信息成功！');
+            }
+            else
+            {
+                return array('code' => 4001,
+                    'data' => array(),
+                    'message'=> $user->error);
+            }
+        }
+        catch(\Exception $e)
+        {
+            return array('code' => 2000,
+                'data' => array(),
+                'message'=> $e->getMessage());
+        }
+    }
 
 
     /**

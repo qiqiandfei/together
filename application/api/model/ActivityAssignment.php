@@ -157,6 +157,12 @@ class ActivityAssignment extends Model
     }
 
 
+    /**
+     * Notes:删除活动任务
+     * @return array
+     * author: Fei
+     * Time: 2019/7/15 13:31
+     */
     public function delActivityTask()
     {
         try
@@ -174,6 +180,85 @@ class ActivityAssignment extends Model
                     'data' => $obj->data,
                     'message'=> '删除活动任务成功！');
 
+            }
+            else
+            {
+                return array('code' => 4001,
+                    'data' => array(),
+                    'message'=> $task->error);
+            }
+        }
+        catch (\Exception $e)
+        {
+            return array('code' => 2000,
+                'data' => array(),
+                'message'=> $e->getMessage());
+        }
+    }
+
+    /**
+     * Notes:获取活动任务
+     * @return array
+     * author: Fei
+     * Time: 2019/7/15 13:04
+     */
+    public function getActivityTask()
+    {
+        try
+        {
+            $task = new ActivityAssignment();
+            if($_REQUEST['receive_user_id'] != 0 and $_REQUEST['assignment_state'] != 0)
+            {
+                $tasks = $task->where([
+                    'activity_id'=>$_REQUEST['activity_id'],
+                    'receive_user_id'=>$_REQUEST['receive_user_id'],
+                    'assignment_state'=>$_REQUEST['assignment_state'],
+                    'is_delete'=>0
+                ])->select();
+            }
+            else if($_REQUEST['receive_user_id'] == 0 and $_REQUEST['assignment_state'] != 0)
+            {
+                $tasks = $task->where([
+                    'activity_id'=>$_REQUEST['activity_id'],
+                    'assignment_state'=>$_REQUEST['assignment_state'],
+                    'is_delete'=>0
+                ])->select();
+            }
+            else if($_REQUEST['receive_user_id'] != 0 and $_REQUEST['assignment_state'] == 0)
+            {
+                $tasks = $task->where([
+                    'activity_id'=>$_REQUEST['activity_id'],
+                    'receive_user_id'=>$_REQUEST['receive_user_id'],
+                    'is_delete'=>0
+                ])->select();
+            }
+            else
+            {
+                $tasks = $task->where([
+                    'activity_id'=>$_REQUEST['activity_id'],
+                    'is_delete'=>0
+                ])->select();
+            }
+
+            if(empty($task->error))
+            {
+                $activitytasks = [];
+                foreach ($tasks as $item)
+                {
+                    array_push($activitytasks,$item->data);
+                }
+                if(count($activitytasks) > 0)
+                {
+                    return array('code' => 1000,
+                        'data' => $activitytasks,
+                        'message'=> '获取活动任务成功！');
+                }
+                else
+                {
+                    return array('code' => 1000,
+                        'data' => array(),
+                        'message'=> '该活动暂无任务！');
+                }
             }
             else
             {

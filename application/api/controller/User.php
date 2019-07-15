@@ -51,6 +51,36 @@ class User extends Controller
     }
 
     /**
+     * Notes:修改用户信息
+     * author: Fei
+     * Time: 2019/7/15 11:19
+     */
+    public function editUser()
+    {
+        //加密前参数
+        $ranstr = $_REQUEST['ranStr'];
+        //加密后参数
+        $reqtoken = $_REQUEST['reqToken'];
+        $logintoken = $_REQUEST['accessToken'];
+
+        $checkres = check_req_login($reqtoken,$ranstr,$logintoken);
+        //验证请求是否合法
+        if($checkres['code'] == 1000)
+        {
+            //实例化模型
+            $model = new \app\api\model\User();
+            //返回用户信息
+            $res = $model->editUser($logintoken);
+            json($res['code'],$res['data'],$res['message']);
+        }
+        else
+        {
+            json($checkres['code'],$checkres['data'],$checkres['message']);
+        }
+
+    }
+
+    /**
      * Notes:获取用户信息
      * @throws \think\exception\DbException
      * author: Fei

@@ -8,8 +8,6 @@
 
 namespace app\api\model;
 
-
-use Snowflake;
 use think\Model;
 
 class UserOfficialAccount extends Model
@@ -23,7 +21,7 @@ class UserOfficialAccount extends Model
      * author: Fei
      * Time: 2019/7/12 13:23
      */
-    public function addUser($id,$param,$unionid)
+    public function addUser($id,$param)
     {
         $user = new UserOfficialAccount();
         try
@@ -31,7 +29,7 @@ class UserOfficialAccount extends Model
             $user->startTrans();
             $user->save(['id' => $id,
                 'openid' => $param['openId'],
-                'union_id' => $unionid,
+                'union_id' => "",
                 'nick_name' => $param['nickName'],
                 'head_portrait' => $param['avatarUrl'],
                 'sex' => $param['gender'],

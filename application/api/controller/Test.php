@@ -65,38 +65,14 @@ class Test extends  Controller
 
     public function pagetest()
     {
-        $openId = $_REQUEST['openid'];
-        $time = (string)time();
-        //生成token
-        $token = aesencrypt($openId.$time);
-        Cache::store('redis')->set($token,$time);
+        //加密前参数
+        $ranstr = $_REQUEST['ranStr'];
+        //加密后参数
+        $reqtoken = $_REQUEST['reqToken'];
+        $logintoken = $_REQUEST['token'];
 
-        //$token = $_REQUEST['token'];
-        try
-        {
-            $value = Cache::store('redis')->get($token);
-        }
-        catch (\think\exception $e)
-        {
-            $err = $e->getMessage();
-        }
+        $checkres = check_req_login($reqtoken,$ranstr,$logintoken);
 
-        $curtime = time();
-        //token过期
-        if($curtime - (int)$value < 3600 * 8)
-        {
-            $decstr = aesdecrypt($token);
-            $openid = substr($decstr,0,strlen($decstr) - strlen($value));
-            $newtoken = aesencrypt($openid.$time);
-            //删除过期token
-            Cache::store('redis')->rm($token);
-            $value = Cache::store('redis')->get($token);
-            //缓存新token
-            Cache::store('redis')->set($newtoken,$time);
-            return array('token' => $newtoken, 'openId' => $openid);
-        }
-        else
-            return array();
     }
 
     public function getinfo()
@@ -124,5 +100,12 @@ class Test extends  Controller
         {
             json(7000,array(),$decryptres);
         }
+    }
+
+    public function mobileLogin()
+    {
+        $minaCode = $_REQUEST['minaCode'];
+        $res = model('Base')->mobileLogin($minaCode);
+        json($res['code'],$res['data'],$res['message']);
     }
 }
