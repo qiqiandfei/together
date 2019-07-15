@@ -96,14 +96,13 @@ use think\Validate;
         {
             $openid = json_decode($objSession)->openid;
             $sessionkey = json_decode($objSession)->session_key;
-            $unionid = json_decode($objSession)->unionid;
             if(Cache::store('redis')->has($openid))
             {
                 Cache::store('redis')->rm($openid);
-                Cache::store('redis')->set($openid,array('sessionkey'=>$sessionkey,'unionid'=>$unionid),300);
+                Cache::store('redis')->set($openid,$sessionkey,300);
             }
             else
-                Cache::store('redis')->set($openid,array('sessionkey'=>$sessionkey,'unionid'=>$unionid),300);
+                Cache::store('redis')->set($openid,$sessionkey,300);
             return $openid;
         }
 
@@ -177,8 +176,7 @@ use think\Validate;
      */
     function decryptData($encryptedData, $iv, $openid, &$data)
     {
-        $info = Cache::store('redis')->get($openid);
-        $sessionKey = $info['sessionkey'];
+        $sessionKey = Cache::store('redis')->get($openid);
 
         $appid = Config::get('wechat')['XCX_AppID'];
 
@@ -312,7 +310,7 @@ use think\Validate;
                 if(Cache::store('redis')->has($logintoken))
                     return array('code'=>1000,'data'=>array(),'message'=>'验证通过！');
                 else
-                    return array('code'=>5002,'data'=>array(),'message'=>'登录token过期，请重新登录！');
+                    return array('code'=>5003,'data'=>array(),'message'=>'登录token过期，请重新登录！');
             }
             else
                 return array('code'=>5000,'data'=>array(),'message'=>'非法请求！');
@@ -374,8 +372,34 @@ use think\Validate;
         {
              return array('code'=>7001,'data'=>array(),'message'=>$response->Message);
         }
-
     }
+
+    /**
+     * Notes:获取用户真实ip地址
+     * @return mixed|string
+     * author: Fei
+     * Time: 2019/7/15 10:41
+     */
+    function get_cip()
+    {
+        if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+        $cip = $_SERVER['HTTP_CLIENT_IP'];
+        }
+        else if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+        $cip = $_SERVER["HTTP_X_FORWARDED_FOR"];
+        }
+        else if(!empty($_SERVER["REMOTE_ADDR"])){
+        $cip = $_SERVER["REMOTE_ADDR"];
+        }else{
+        $cip = '';
+        }
+        preg_match("/[\d\.]{7,15}/", $cip, $cips);
+        $cip = isset($cips[0]) ? $cips[0] : 'unknown';
+        unset($cips);
+        return $cip;
+    }
+
+
 
 
 
