@@ -145,29 +145,14 @@ class User extends Model
      */
     public function isUserexists($mina_openid)
     {
-        $res = User::get($mina_openid);
+        $user = new User();
+        $res = $user->where('mina_openid',$mina_openid)->find();
         if($res)
             return true;
         else
             return false;
     }
 
-    /**
-     * Notes:获取userid
-     * @param $openid
-     * @return int
-     * @throws \think\exception\DbException
-     * author: Fei
-     * Time: 2019/7/9 16:54
-     */
-    public function getUserId($openid)
-    {
-        $res = User::get($openid);
-        if($res)
-            return $res->data['id'];
-        else
-            return 0;
-    }
 
     /**
      * Notes:获取用户信息
@@ -181,7 +166,7 @@ class User extends Model
     {
         $res = User::get($userid);
         if($res)
-            return $res;
+            return $res->getData();
         else
             return null;
     }
@@ -196,11 +181,12 @@ class User extends Model
      */
     public function getUserInfo_openid($openid)
     {
-        $res = User::get($openid);
+        $res = User::get(['mina_openid'=>$openid]);
         if($res)
-            return $res;
+            return $res->getData();
         else
             return null;
+
     }
 
     /**
@@ -216,7 +202,7 @@ class User extends Model
         {
             $user = Cache::store('redis')->get($logintoken);
             if($user)
-                return array('code'=>1000,'data'=>$user->data,'message'=>'获取用户信息成功！');
+                return array('code'=>1000,'data'=>$user,'message'=>'获取用户信息成功！');
             else
                 return array('code'=>5000,'data'=>array(),'message'=>'获取用户信息失败！');
         }
@@ -239,7 +225,7 @@ class User extends Model
         $request = Request::instance();
         $userid = aesdecrypt($token);
         $res = $this->getUserInfo_userid($userid);
-        $res->where('id',$res->data['id'])->update(
+        User::where('id',$res['id'])->update(
             [
                 'last_login_time'=> date('Y-m-d H:i:s', time()),
                 'last_login_ip' => $request->ip()
@@ -250,15 +236,17 @@ class User extends Model
     public function getinfo()
     {
         try {
-            $res = $this->where('id','>',0)->select();
-            $users = [];
-//            //$res = User::all();
-//            foreach($res as $item)
-//                array_push($users,$item->data);
-            $users = $res->toArray();
-            return array('code' => 1000,
-                'data' => $res,
-                'message' => '用户注册失败，请稍后再试！');
+            //$res = User::get('4846219238449585');
+            //$res = User::where('id','4846219238449585')->find();
+            //$user = new User();
+            $res = User::where('id','4846219238449585')->find();
+            if($res)
+                return $res->getData();
+            else
+                return false;
+//            return array('code' => 2000,
+//                'data' => $res->getData(),
+//                'message'=> 'ok');
         }
         catch(\Exception $e)
         {

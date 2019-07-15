@@ -101,11 +101,11 @@ class ActivityComment extends Model
                 $comments = $comment->where(['is_delete'=>0,
                     'activity_id'=>$_REQUEST['activityId'],
                     'parent_id'=>0
-                ])->select();
+                ])->order('create_time')->select();
 
                 foreach ($comments as $item)
                 {
-                    $subcomments = $this->getAllComments($item->data,$subcomments);
+                    $subcomments = $this->getAllComments($item->data,array());
                     array_push($allcomments,$subcomments);
                 }
             }
@@ -117,7 +117,7 @@ class ActivityComment extends Model
                     'activity_id'=>$_REQUEST['activityId'],
                     'schedule_id'=>$_REQUEST['scheduleId'],
                     'parent_id'=>0
-                ])->select();
+                ])->order('create_time')->select();
 
                 foreach ($comments as $item)
                 {
@@ -125,7 +125,18 @@ class ActivityComment extends Model
                     array_push($allcomments,$subcomments);
                 }
             }
-
+            if(count($allcomments) > 0)
+            {
+                return array('code' => 1000,
+                    'data' => $allcomments,
+                    'message'=> '获取评论成功！');
+            }
+            else
+            {
+                return array('code' => 1000,
+                    'data' => array(),
+                    'message'=> '该活动或行程下暂无评论！');
+            }
 
         }
         catch (\Exception $e)
@@ -142,7 +153,7 @@ class ActivityComment extends Model
         {
             $soncomments = ActivityComment::where(['is_delete'=>0,
                 'activityId'=>$_REQUEST['activity_id'],
-                'parent_id'=>$comment['id']])->select();
+                'parent_id'=>$comment['id']])->order('create_time')->select();
 
             if($soncomments)
             {
@@ -160,7 +171,7 @@ class ActivityComment extends Model
             $soncomments = ActivityComment::where(['is_delete'=>0,
                 'activity_id'=>$_REQUEST['activityId'],
                 'schedule_id'=>$_REQUEST['scheduleId'],
-                'parent_id'=>$comment['id']])->select();
+                'parent_id'=>$comment['id']])->order('create_time')->select();
 
             if($soncomments)
             {

@@ -32,7 +32,7 @@ class Base
             $logintoken = aesencrypt($userinfo['id']);
 
             //更新缓存中的数据，添加登录token
-            Cache::store('redis')->set($logintoken,$userinfo->data,7200);
+            Cache::store('redis')->set($logintoken,$userinfo,7200);
 
             //更新最后登录信息
             $user->updLastLoginInfo($logintoken);

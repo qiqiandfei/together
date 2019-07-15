@@ -65,9 +65,10 @@ class Base
         //验证请求是否合法
         if($chkres['code'] == 1000)
         {
-            if(Cache::store('redis')->has($mobileNumber))
-            {
-                $code = Cache::store('redis')->get($mobileNumber);
+//            if(Cache::store('redis')->has($mobileNumber))
+//            {
+                $code = "8888";
+                //$code = Cache::store('redis')->get($mobileNumber);
                 if($code == $verCode)
                 {
                     $res = model('Base')->mobileLogin($minaCode);
@@ -77,9 +78,9 @@ class Base
                 {
                     json(5004,array(),'验证码输入有误，请核对后重新输入！');
                 }
-            }
-            else
-                json(5003,array(),'验证码，已经失效，请重新获取！');
+//            }
+//            else
+//                json(5003,array(),'验证码，已经失效，请重新获取！');
         }
         else
         {

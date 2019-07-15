@@ -20,6 +20,14 @@ class Test extends  Controller
 
     }
 
+    public function test1()
+    {
+        $user = new \app\api\model\User();
+        $res = $user->getUserInfo_token();
+        json(1000,$res['data'],'ok');
+
+    }
+
     public function getReqtoken()
     {
         $randstr = $_REQUEST['randStr'];
