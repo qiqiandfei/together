@@ -73,13 +73,7 @@ class Test extends  Controller
 
     public function pagetest()
     {
-        //加密前参数
-        $ranstr = $_REQUEST['ranStr'];
-        //加密后参数
-        $reqtoken = $_REQUEST['reqToken'];
-        $logintoken = $_REQUEST['token'];
-
-        $checkres = check_req_login($reqtoken,$ranstr,$logintoken);
+        model('activity')->test();
 
     }
 

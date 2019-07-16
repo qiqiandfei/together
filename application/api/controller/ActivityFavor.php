@@ -1,8 +1,8 @@
 <?php
 /**
  * Create by: yufei
- * Date: 2019/7/15
- * Time: 13:35
+ * Date: 2019/7/16
+ * Time: 15:41
  * Copyright © 2019年 Fei. All rights reserved.
  */
 
@@ -11,14 +11,14 @@ namespace app\api\controller;
 
 use think\Controller;
 
-class ActivityComment extends Controller
+class ActivityFavor extends Controller
 {
     /**
-     * Notes:新增活动评论
+     * Notes:活动点赞
      * author: Fei
-     * Time: 2019/7/15 13:36
+     * Time: 2019/7/16 15:41
      */
-    public function addComment()
+    public function addFavor()
     {
         //加密前参数
         $ranstr = $_REQUEST['ranStr'];
@@ -31,9 +31,9 @@ class ActivityComment extends Controller
         if($checkres['code'] == 1000)
         {
             //实例化模型
-            $model = new \app\api\model\ActivityComment();
-            //新增活动评论
-            $res = $model->addComment();
+            $model = new \app\api\model\ActivityFavor();
+            //添加标签
+            $res = $model->addFavor();
             json($res['code'],$res['data'],$res['message']);
         }
         else
@@ -43,11 +43,11 @@ class ActivityComment extends Controller
     }
 
     /**
-     * Notes:获取活动评论
+     * Notes:活动点赞
      * author: Fei
-     * Time: 2019/7/15 13:45
+     * Time: 2019/7/16 15:41
      */
-    public function getComment()
+    public function getFavorCount()
     {
         //加密前参数
         $ranstr = $_REQUEST['ranStr'];
@@ -60,9 +60,9 @@ class ActivityComment extends Controller
         if($checkres['code'] == 1000)
         {
             //实例化模型
-            $model = new \app\api\model\ActivityComment();
-            //获取活动评论
-            $res = $model->getComment();
+            $model = new \app\api\model\ActivityFavor();
+            //添加标签
+            $res = $model->getFavorCount();
             json($res['code'],$res['data'],$res['message']);
         }
         else
@@ -72,11 +72,11 @@ class ActivityComment extends Controller
     }
 
     /**
-     * Notes:删除活动评论
+     * Notes:取消活动点赞
      * author: Fei
-     * Time: 2019/7/16 16:35
+     * Time: 2019/7/16 16:00
      */
-    public function delComment()
+    public function delFavor()
     {
         //加密前参数
         $ranstr = $_REQUEST['ranStr'];
@@ -89,38 +89,9 @@ class ActivityComment extends Controller
         if($checkres['code'] == 1000)
         {
             //实例化模型
-            $model = new \app\api\model\ActivityComment();
-            //获取活动评论
-            $res = $model->delComment();
-            json($res['code'],$res['data'],$res['message']);
-        }
-        else
-        {
-            json($checkres['code'],$checkres['data'],$checkres['message']);
-        }
-    }
-
-    /**
-     * Notes:编辑活动评论
-     * author: Fei
-     * Time: 2019/7/16 16:36
-     */
-    public function editComment()
-    {
-        //加密前参数
-        $ranstr = $_REQUEST['ranStr'];
-        //加密后参数
-        $reqtoken = $_REQUEST['reqToken'];
-        $logintoken = $_REQUEST['token'];
-
-        $checkres = check_req_login($reqtoken,$ranstr,$logintoken);
-        //验证请求是否合法
-        if($checkres['code'] == 1000)
-        {
-            //实例化模型
-            $model = new \app\api\model\ActivityComment();
-            //获取活动评论
-            $res = $model->editComment();
+            $model = new \app\api\model\ActivityFavor();
+            //添加标签
+            $res = $model->delFavor();
             json($res['code'],$res['data'],$res['message']);
         }
         else

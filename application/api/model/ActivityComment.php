@@ -87,8 +87,6 @@ class ActivityComment extends Model
     {
         try
         {
-            $comment = new ActivityComment();
-
             //获取所有评论
             $allcomments = [];
             //一个父级评论下的所有评论
@@ -98,22 +96,26 @@ class ActivityComment extends Model
             if($_REQUEST['scheduleId'] == 0)
             {
                 //获取所有评论的根
-                $comments = $comment->where(['is_delete'=>0,
+                $comments = ActivityComment::where(['is_delete'=>0,
                     'activity_id'=>$_REQUEST['activityId'],
                     'parent_id'=>0
                 ])->order('create_time')->select();
 
                 foreach ($comments as $item)
                 {
-                    $subcomments = $this->getAllComments($item->data,array());
-                    array_push($allcomments,$subcomments);
+                    array_push($allcomments,$item->data);
+
+                    $subcomments = $this->getAllComments($item->data);
+                    foreach ($subcomments as $subitem)
+                        array_push($allcomments,$subitem);
                 }
+
             }
             //针对某个行程的所有评论
             else
             {
                 //获取所有评论的根
-                $comments = $comment->where(['is_delete'=>0,
+                $comments = ActivityComment::where(['is_delete'=>0,
                     'activity_id'=>$_REQUEST['activityId'],
                     'schedule_id'=>$_REQUEST['scheduleId'],
                     'parent_id'=>0
@@ -121,8 +123,11 @@ class ActivityComment extends Model
 
                 foreach ($comments as $item)
                 {
-                    $subcomments = $this->getAllComments($item->data,$subcomments);
-                    array_push($allcomments,$subcomments);
+                    array_push($allcomments,$item->data);
+
+                    $subcomments = $this->getAllComments($item->data);
+                    foreach ($subcomments as $subitem)
+                        array_push($allcomments,$subitem);
                 }
             }
             if(count($allcomments) > 0)
@@ -147,6 +152,104 @@ class ActivityComment extends Model
         }
     }
 
+    /**
+     * Notes:删除评论
+     * @return array
+     * author: Fei
+     * Time: 2019/7/16 16:32
+     */
+    public function delComment()
+    {
+        try
+        {
+            $comment = new ActivityComment();
+            $comment->where('id',$_REQUEST['id'])->update(['is_delete' => 1]);
+            if($comment->error)
+            {
+                return array('code' => 1000,
+                    'data' => array(),
+                    'message'=> '删除活动评论成功！');
+
+            }
+            else
+            {
+                return array('code' => 3000,
+                    'data' => array(),
+                    'message'=> $comment->error);
+            }
+
+        }
+        catch (\Exception $e)
+        {
+            return array('code' => 2000,
+                'data' => array(),
+                'message'=> $e->getMessage());
+        }
+    }
+
+    /**
+     * Notes:编辑活动评论
+     * @return array
+     * author: Fei
+     * Time: 2019/7/16 16:37
+     */
+    public function editComment()
+    {
+        try
+        {
+            $comment = new ActivityComment();
+            $resval = $comment->validate(
+                [
+                    'comment_content'=>'require'
+                ],
+                [
+                    'comment_content.require'=>'评论内容不能为空！'
+                ]
+            )->where('id',$_REQUEST['id'])
+                ->where('is_delete',0)
+                ->update(['comment_content' => $_REQUEST['comment_content']]);
+            if($resval)
+            {
+                if($comment->error)
+                {
+                    return array('code' => 1000,
+                        'data' => array(),
+                        'message'=> '编辑活动评论成功！');
+
+                }
+                else
+                {
+                    return array('code' => 3000,
+                        'data' => array(),
+                        'message'=> $comment->error);
+                }
+            }
+            else
+            {
+                return array('code' => 4001,
+                    'data' => array(),
+                    'message'=> $comment->error);
+            }
+        }
+        catch (\Exception $e)
+        {
+            return array('code' => 2000,
+                'data' => array(),
+                'message'=> $e->getMessage());
+        }
+    }
+
+    /**
+     * Notes:获取个评论的回复
+     * @param $comment
+     * @param array $comments
+     * @return array
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     * author: Fei
+     * Time: 2019/7/16 16:29
+     */
     private function getAllComments($comment,$comments = [])
     {
         if($_REQUEST['scheduleId'] == 0)
@@ -155,12 +258,12 @@ class ActivityComment extends Model
                 'activityId'=>$_REQUEST['activity_id'],
                 'parent_id'=>$comment['id']])->order('create_time')->select();
 
-            if($soncomments)
+            if(count($soncomments) > 0)
             {
                 foreach ($soncomments as $item)
                 {
                     array_push($comments,$item->data);
-                    getAllComments($item->data->data,$comments);
+                    getAllComments($item->data,$comments);
                 }
             }
             else
@@ -173,12 +276,12 @@ class ActivityComment extends Model
                 'schedule_id'=>$_REQUEST['scheduleId'],
                 'parent_id'=>$comment['id']])->order('create_time')->select();
 
-            if($soncomments)
+            if(count($soncomments) > 0)
             {
                 foreach ($soncomments as $item)
                 {
                     array_push($comments,$item->data);
-                    getAllComments($item->data->data,$comments);
+                    getAllComments($item->data,$comments);
                 }
             }
             else

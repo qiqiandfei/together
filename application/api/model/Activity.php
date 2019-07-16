@@ -354,7 +354,6 @@ class Activity extends Model
     }
 
 
-
     /**
      * Notes:计算两个日期相差多少天
      * @param $day1
@@ -374,5 +373,18 @@ class Activity extends Model
             $second1 = $tmp;
         }
         return ($second1 - $second2) / 86400;
+    }
+
+
+    public function test()
+    {
+        $res = [];
+        $activity = new Activity();
+        $activitys = $activity->where('id','>',0)->order('create_time')->select();
+        foreach ($activitys as $item)
+        {
+            array_push($res,$item->data);
+        }
+
     }
 }
