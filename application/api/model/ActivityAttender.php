@@ -160,8 +160,8 @@ class ActivityAttender extends Model
             }
             else
                 $nickname = $_REQUEST['nick_name'];
-            $aa = new ActivityAttender();
-            $editflg = $aa->where('activity_id',$_REQUEST['activity_id'])
+            $attender = new ActivityAttender();
+            $editflg = $attender->where('activity_id',$_REQUEST['activity_id'])
                           ->where('family_id',$_REQUEST['family_id'])
                           ->where('family_member_id',$_REQUEST['family_member_id'])
                           ->where('attend_state',1)
@@ -174,7 +174,7 @@ class ActivityAttender extends Model
             if($editflg)
             {
                 return array('code' => 1000,
-                    'data' => $aa->getChangedData(),
+                    'data' => $attender->getChangedData(),
                     'message'=> '编辑活动用户成功！');
             }
             else
@@ -203,12 +203,12 @@ class ActivityAttender extends Model
         try
         {
             $users = [];
-            $userids = ActivityAttender::field('family_member_id')
-                ->where(['activity_id'=>$_REQUEST['activity_id'],'attend_state'=>1])
+            $attender = new ActivityAttender();
+            $attenders = $attender->where(['activity_id'=>$_REQUEST['activity_id'],'attend_state'=>1])
                 ->select();
-            foreach($userids as $userid)
+            foreach($attenders as $item)
             {
-                $user = User::get($userid);
+                $user = User::get($item->data['family_member_id']);
                 array_push($users,$user->data);
             }
             if(count($users) > 0)

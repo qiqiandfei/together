@@ -1,8 +1,8 @@
 <?php
 /**
  * Create by: yufei
- * Date: 2019/7/10
- * Time: 13:31
+ * Date: 2019/7/17
+ * Time: 9:58
  * Copyright © 2019年 Fei. All rights reserved.
  */
 
@@ -11,14 +11,14 @@ namespace app\api\controller;
 
 use think\Controller;
 
-class ActivityLabel extends Controller
+class ActivitySpare extends Controller
 {
     /**
-     * Notes:添加活动标签
+     * Notes:新增活动备品
      * author: Fei
-     * Time: 2019/7/10 13:32
+     * Time: 2019/7/17 10:16
      */
-    public function addLabel()
+    public function addSpare()
     {
         //加密前参数
         $ranstr = $_REQUEST['ranStr'];
@@ -31,9 +31,9 @@ class ActivityLabel extends Controller
         if($checkres['code'] == 1000)
         {
             //实例化模型
-            $model = new \app\api\model\ActivityLabel();
+            $model = new \app\api\model\ActivitySpare();
             //添加标签
-            $res = $model->addLabel();
+            $res = $model->addSpare();
             json($res['code'],$res['data'],$res['message']);
         }
         else
@@ -43,11 +43,11 @@ class ActivityLabel extends Controller
     }
 
     /**
-     * Notes:删除活动标签
+     * Notes:获取活动备品
      * author: Fei
-     * Time: 2019/7/17 9:50
+     * Time: 2019/7/17 10:16
      */
-    public function delLabel()
+    public function getSpare()
     {
         //加密前参数
         $ranstr = $_REQUEST['ranStr'];
@@ -60,38 +60,9 @@ class ActivityLabel extends Controller
         if($checkres['code'] == 1000)
         {
             //实例化模型
-            $model = new \app\api\model\ActivityLabel();
+            $model = new \app\api\model\ActivitySpare();
             //添加标签
-            $res = $model->delLabel();
-            json($res['code'],$res['data'],$res['message']);
-        }
-        else
-        {
-            json($checkres['code'],$checkres['data'],$checkres['message']);
-        }
-    }
-
-    /**
-     * Notes:获取活动标签
-     * author: Fei
-     * Time: 2019/7/17 9:52
-     */
-    public function getLabel()
-    {
-        //加密前参数
-        $ranstr = $_REQUEST['ranStr'];
-        //加密后参数
-        $reqtoken = $_REQUEST['reqToken'];
-        $logintoken = $_REQUEST['token'];
-
-        $checkres = check_req_login($reqtoken,$ranstr,$logintoken);
-        //验证请求是否合法
-        if($checkres['code'] == 1000)
-        {
-            //实例化模型
-            $model = new \app\api\model\ActivityLabel();
-            //添加标签
-            $res = $model->getLabel();
+            $res = $model->getSpare();
             json($res['code'],$res['data'],$res['message']);
         }
         else

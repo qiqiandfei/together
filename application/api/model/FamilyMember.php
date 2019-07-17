@@ -24,8 +24,20 @@ class FamilyMember extends Model
     {
         try
         {
+            $activityid = 0;
             $user = model('user')->getUserInfo_token($_REQUEST['token']);
+            if($_REQUEST['userid'] == 0)
+            {
+                $userid = $user['data']['id'];
+            }
+            else
+            {
+                $userid = $_REQUEST['userid'];
+                $activityid = $_REQUEST['activityid'];
+            }
+
             $member = new FamilyMember();
+            $member->startTrans();
             $id = Snowflake::getsnowId();
             $resval = $member->validate(
                 [
@@ -36,7 +48,7 @@ class FamilyMember extends Model
                 ]
             )->save(['id' => $id,
                     'family_id' => $_REQUEST['familyid'],
-                    'user_id' => $user['data']['id'],
+                    'user_id' => $userid,
                     'member_title' => $_REQUEST['membertitle'],
                     'is_head' => $_REQUEST['ishead'],
                     'is_delete' => 0,
@@ -44,18 +56,60 @@ class FamilyMember extends Model
                 ]);
             if($resval)
             {
-                $obj = $member::get($id);
-                if($obj)
+                //活动不为零的时候更新活动成员表的家庭id
+                if($activityid != 0)
                 {
-                    return array('code' => 1000,
-                        'data' => $obj->data,
-                        'message'=> '创建家庭成员成功！');
+                    $attender = new ActivityAttender();
+                    $attender->startTrans();
+                    $attender->where(['family_member_id'=>$userid,
+                        'activity_id'=>$activityid])
+                        ->update(['family_id'=>$_REQUEST['familyid']]);
+                    if(empty($attender->error))
+                    {
+                        $obj = $member::get($id);
+                        if($obj)
+                        {
+                            $attender->commit();
+                            $member->commit();
+                            return array('code' => 1000,
+                                'data' => $obj->data,
+                                'message'=> '创建家庭成员成功！');
+                        }
+                        else
+                        {
+                            $attender->rollback();
+                            $member->rollback();
+                            return array('code' => 3000,
+                                'data' => array(),
+                                'message'=> $member->error);
+                        }
+                    }
+                    else
+                    {
+                        $attender->rollback();
+                        $member->rollback();
+                        return array('code' => 3000,
+                            'data' => array(),
+                            'message'=> $member->error);
+                    }
                 }
                 else
                 {
-                    return array('code' => 3000,
-                        'data' => array(),
-                        'message'=> $member->error);
+                    $obj = $member::get($id);
+                    if($obj)
+                    {
+                        $member->commit();
+                        return array('code' => 1000,
+                            'data' => $obj->data,
+                            'message'=> '创建家庭成员成功！');
+                    }
+                    else
+                    {
+                        $member->rollback();
+                        return array('code' => 3000,
+                            'data' => array(),
+                            'message'=> $member->error);
+                    }
                 }
             }
             else

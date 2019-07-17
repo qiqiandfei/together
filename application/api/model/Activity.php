@@ -374,17 +374,4 @@ class Activity extends Model
         }
         return ($second1 - $second2) / 86400;
     }
-
-
-    public function test()
-    {
-        $res = [];
-        $activity = new Activity();
-        $activitys = $activity->where('id','>',0)->order('create_time')->select();
-        foreach ($activitys as $item)
-        {
-            array_push($res,$item->data);
-        }
-
-    }
 }

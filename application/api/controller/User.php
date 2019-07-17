@@ -81,10 +81,40 @@ class User extends Controller
     }
 
     /**
-     * Notes:获取用户信息
+     * Notes:获取登录用户信息
      * @throws \think\exception\DbException
      * author: Fei
      * Time: 2019/7/9 21:10
+     */
+    public function getLoginUserInfo()
+    {
+        //加密前参数
+        $ranstr = $_REQUEST['ranStr'];
+        //加密后参数
+        $reqtoken = $_REQUEST['reqToken'];
+        $logintoken = $_REQUEST['accessToken'];
+
+        $checkres = check_req_login($reqtoken,$ranstr,$logintoken);
+        //验证请求是否合法
+        if($checkres['code'] == 1000)
+        {
+            //实例化模型
+            $model = new \app\api\model\User();
+            //返回用户信息
+            $res = $model->getUserInfo_token($logintoken);
+            json($res['code'],$res['data'],$res['message']);
+        }
+        else
+        {
+            json($checkres['code'],$checkres['data'],$checkres['message']);
+        }
+    }
+
+    /**
+     * Notes:获取任意用户信息
+     * @throws \think\exception\DbException
+     * author: Fei
+     * Time: 2019/7/17 17:16
      */
     public function getUserInfo()
     {
@@ -101,7 +131,7 @@ class User extends Controller
             //实例化模型
             $model = new \app\api\model\User();
             //返回用户信息
-            $res = $model->getUserInfo_token($logintoken);
+            $res = $model->getUserInfo_userid($_REQUEST['userid']);
             json($res['code'],$res['data'],$res['message']);
         }
         else

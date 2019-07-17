@@ -88,6 +88,37 @@ class Base
         }
     }
 
+    /**
+     * Notes:退出登录
+     * author: Fei
+     * Time: 2019/7/17 10:21
+     */
+    public function loginOut()
+    {
+        //加密前参数
+        $ranstr = $_REQUEST['ranStr'];
+        //加密后参数
+        $reqtoken = $_REQUEST['reqToken'];
+        $logintoken = $_REQUEST['token'];
+
+        $checkres = check_req_login($reqtoken,$ranstr,$logintoken);
+        //验证请求是否合法
+        if($checkres['code'] == 1000)
+        {
+
+            //删除用户token
+            if(Cache::store('redis')->has($logintoken))
+            {
+                Cache::store('redis')->rm($logintoken);
+                json(1000,array(),'退出登录成功');
+            }
+        }
+        else
+        {
+            json($checkres['code'],$checkres['data'],$checkres['message']);
+        }
+    }
+
     public function wxxLogin()
     {
         $verCode = $_REQUEST['verCode'];
