@@ -50,7 +50,7 @@ class ActivityAttach extends Model
                     'file_url' => $url,
                     'creator' => $user['data']['id']
                 ]);
-                $obj = $attach::get($id);
+                $obj = ActivityAttach::get($id);
                 array_push($attachs,$obj->data);
                 if(!$resval)
                 {
@@ -83,4 +83,5 @@ class ActivityAttach extends Model
                 'message'=> $e->getMessage());
         }
     }
+
 }

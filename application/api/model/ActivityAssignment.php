@@ -56,7 +56,7 @@ class ActivityAssignment extends Model
 
             if($resval)
             {
-                $obj = $task::get($id);
+                $obj = ActivityAssignment::get($id);
                 if($obj)
                 {
                     return array('code' => 1000,
@@ -127,7 +127,7 @@ class ActivityAssignment extends Model
 
             if($resval)
             {
-                $obj = $task::get($_REQUEST['id']);
+                $obj = ActivityAssignment::get($_REQUEST['id']);
                 if($task->error)
                 {
                     return array('code' => 1000,
@@ -175,7 +175,7 @@ class ActivityAssignment extends Model
 
             if(empty($task->error))
             {
-                $obj = $task::get($_REQUEST['id']);
+                $obj = ActivityAssignment::get($_REQUEST['id']);
                 return array('code' => 1000,
                     'data' => $obj->data,
                     'message'=> '删除活动任务成功！');

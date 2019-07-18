@@ -43,7 +43,7 @@ class ActivityLabel extends Model
                     ]);
             if($resval)
             {
-                $obj = $label::get($id);
+                $obj = ActivityLabel::get($id);
                 if($obj)
                 {
                     return array('code' => 1000,

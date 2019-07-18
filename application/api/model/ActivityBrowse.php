@@ -39,7 +39,7 @@ class ActivityBrowse extends Model
                 'creator' => $user['data']['id']
             ]);
 
-            $obj = $activitybrowse::get($id);
+            $obj = ActivityBrowse::get($id);
             if($obj)
             {
                 return array('code' => 1000,

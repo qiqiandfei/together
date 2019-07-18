@@ -29,14 +29,16 @@ class Activity extends Model
             $user = model('user')->getUserInfo_token($param['token']);
             //创建活动
             $id = Snowflake::getsnowId();
+            $images = json_decode($param['converImg']);
             $activity = new Activity();
+            $activity->startTrans();
             $resval = $activity->validate(
                 [
                     'activity_name'  => 'require',
                     'conver_img'   => 'require',
                     'target_address' => 'require',
                     'begin_date' => 'require',
-                    'end_date' => 'require|after:'.$param['beginDate']
+                    'end_date' => 'require'
                 ],
                 [
                     'activity_name.require' => '活动名称不能为空！',
@@ -44,7 +46,7 @@ class Activity extends Model
                     'target_address.require' => '目的地不能为空！',
                     'begin_date.require' => '开始日期不能为空！',
                     'end_date.require' => '结束日期不能为空！',
-                    'end_date.after' => '开始日期不能大于结束日期！',
+
                 ])->save(['id' => $id,
                     'template_id' => $param['templateId'],
                     'activity_name' => $param['activityName'],
@@ -58,7 +60,7 @@ class Activity extends Model
                     'average_budget' => $param['averageBudget'],
                     'need_pay' => $param['needPay'],
                     'registration_fee' => $param['registrationFee'],
-                    'conver_img' => $param['converImg'],
+                    'conver_img' => $images['conver_img'],
                     'target_address' => $param['targetAddress'],
                     'brief_introduction' => $param['briefIntroduction'],
                     'remark' => $param['remark'],
@@ -70,15 +72,66 @@ class Activity extends Model
 
             if($resval)
             {
-                $objactivity = $activity::get($id);
+                $objactivity = Activity::get($id);
                 if($objactivity)
                 {
-                    return array('code' => 1000,
-                        'data' => $objactivity->data,
-                        'message'=> '创建活动成功！');
+                    $attachflg = true;
+                    //循环写入附件表
+                    $attach = new ActivityAttach();
+                    $attach->startTrans();
+
+                    foreach($images as $key=>$value)
+                    {
+                        $attachid = Snowflake::getsnowId();
+                        if($key == 'conver_img')
+                        {
+                            $attach->save(['id'=>$attachid,
+                                'activity_id'  => $id,
+                                'schedule_id' => 0,
+                                'attach_type' => '活动图片',
+                                'attach_explain' => '活动封面',
+                                'file_url' => $value,
+                                'creator' => $user['data']['id']
+                            ]);
+                        }
+                        else
+                        {
+                            $attach->save(['id'=>$attachid,
+                                'activity_id'  => $id,
+                                'schedule_id' => 0,
+                                'attach_type' => '活动图片',
+                                'attach_explain' => '活动介绍',
+                                'file_url' => $value,
+                                'creator' => $user['data']['id']
+                            ]);
+                        }
+                        if(!empty($attach->error))
+                        {
+                            $attachflg = false;
+                            break;
+                        }
+                    }
+                    if($attachflg)
+                    {
+                        $activity->commit();
+                        $attach->commit();
+                        return array('code' => 1000,
+                            'data' => $objactivity->data,
+                            'message'=> '创建活动成功！');
+                    }
+                    else
+                    {
+                        $activity->rollback();
+                        $attach->rollback();
+                        return array('code' => 4000,
+                            'data' => array(),
+                            'message'=> $attach->error);
+                    }
+
                 }
                 else
                 {
+                    $activity->rollback();
                     return array('code' => 3000,
                         'data' => array(),
                         'message'=> $activity->error);
@@ -86,6 +139,7 @@ class Activity extends Model
             }
             else
             {
+                $activity->rollback();
                 return array('code' => 4001,
                     'data' => array(),
                     'message'=> $activity->error);
@@ -93,6 +147,7 @@ class Activity extends Model
         }
         catch (\Exception $e)
         {
+            $activity->rollback();
             return array('code' => 2000,
                 'data' => array(),
                 'message'=> $e->getMessage());
@@ -290,7 +345,7 @@ class Activity extends Model
                         ]);
             if($resval)
             {
-                $objactivity = $activity::get($_REQUEST['id']);
+                $objactivity = Activity::get($_REQUEST['id']);
                 if(empty($activity->error))
                 {
                     return array('code' => 1000,
@@ -333,7 +388,7 @@ class Activity extends Model
             $activity->where('id',$_REQUEST['id'])->update(['is_delete'=>1]);
             if(empty($activity->error))
             {
-                $objactivity = $activity::get($_REQUEST['id']);
+                $objactivity = Activity::get($_REQUEST['id']);
                 return array('code' => 1000,
                     'data' => $objactivity->data,
                     'message'=> '删除活动成功！');

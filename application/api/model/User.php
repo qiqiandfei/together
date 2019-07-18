@@ -46,7 +46,7 @@ class User extends Model
                         'creator' => $id,
 
             ]);
-            $objuser = $user::get($id);
+            $objuser = User::get($id);
             if($objuser)
             {
                 //新增UserOfficialAccount表

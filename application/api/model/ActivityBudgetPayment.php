@@ -54,7 +54,7 @@ class ActivityBudgetPayment extends Model
             ]);
             if($resval)
             {
-                $obj = $abp::get($id);
+                $obj = ActivityBudgetPayment::get($id);
                 if($obj)
                 {
                     return array('code' => 1000,

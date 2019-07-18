@@ -39,7 +39,7 @@ class ActivityScheduleDetail extends Model
                 'schedule_content'=>$schedulecontent,
                 'creator'=>$creator
             ]);
-            $obj = $asd::get($id);
+            $obj = ActivityScheduleDetail::get($id);
             if($obj)
             {
                 $asd->commit();

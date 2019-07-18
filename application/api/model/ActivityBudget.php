@@ -47,7 +47,7 @@ class ActivityBudget extends Model
                     ]);
             if($resval)
             {
-                $obj = $budget::get($id);
+                $obj = ActivityBudget::get($id);
                 if($obj)
                 {
                     return array('code' => 1000,
@@ -109,7 +109,7 @@ class ActivityBudget extends Model
             ]);
             if($resval)
             {
-                $obj = $budget::get($_REQUEST['id']);
+                $obj = ActivityBudget::get($_REQUEST['id']);
                 if($obj)
                 {
                     return array('code' => 1000,
@@ -157,7 +157,7 @@ class ActivityBudget extends Model
                 'operator' => $user['data']['id'],
                 'operator_time' => date('Y-m-d H:i:s', time())
             ]);
-            $obj = $budget::get($_REQUEST['id']);
+            $obj = ActivityBudget::get($_REQUEST['id']);
             if(empty($budget->error))
             {
                 return array('code' => 1000,

@@ -46,7 +46,7 @@ class ActivityComment extends Model
             ]);
             if($resval)
             {
-                $obj = $comment::get($id);
+                $obj = ActivityComment::get($id);
                 if($obj)
                 {
                     return array('code' => 1000,

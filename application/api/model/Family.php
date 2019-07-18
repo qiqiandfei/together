@@ -48,7 +48,7 @@ class Family extends Model
                     ]);
             if($resval)
             {
-                $obj = $family::get($id);
+                $obj = Family::get($id);
                 if($obj)
                 {
                     return array('code' => 1000,

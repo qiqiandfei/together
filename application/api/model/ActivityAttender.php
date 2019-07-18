@@ -65,7 +65,7 @@ class ActivityAttender extends Model
                 'contact_number' => $contactNumber,
                 'creator'=>$user['data']['id']
             ]);
-            $obj = $aa::get($id);
+            $obj = ActivityAttender::get($id);
             if($obj)
             {
                 return array('code' => 1000,

@@ -39,7 +39,7 @@ class UserOfficialAccount extends Model
                 'city_name' => $param['city'],
                 'creator' => $id,
             ]);
-            $objuser = $user::get($id);
+            $objuser = User::get($id);
             if($objuser)
             {
                 $user->commit();

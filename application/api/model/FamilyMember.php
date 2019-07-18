@@ -66,7 +66,7 @@ class FamilyMember extends Model
                         ->update(['family_id'=>$_REQUEST['familyid']]);
                     if(empty($attender->error))
                     {
-                        $obj = $member::get($id);
+                        $obj = FamilyMember::get($id);
                         if($obj)
                         {
                             $attender->commit();
@@ -95,7 +95,7 @@ class FamilyMember extends Model
                 }
                 else
                 {
-                    $obj = $member::get($id);
+                    $obj = FamilyMember::get($id);
                     if($obj)
                     {
                         $member->commit();

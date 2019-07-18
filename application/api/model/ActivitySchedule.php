@@ -75,7 +75,7 @@ class ActivitySchedule extends Model
                     ]);
             if($resval)
             {
-                $obj = $as::get($id);
+                $obj = ActivitySchedule::get($id);
                 if($obj)
                 {
                     //新增明细
@@ -224,7 +224,7 @@ class ActivitySchedule extends Model
             ]);
             if($resval)
             {
-                $obj = $as::get($_REQUEST['id']);
+                $obj = ActivitySchedule::get($_REQUEST['id']);
                 if($obj)
                 {
                     //编辑明细
@@ -278,7 +278,7 @@ class ActivitySchedule extends Model
         try
         {
 
-            $obj = $as::get($_REQUEST['id']);
+            $obj = ActivitySchedule::get($_REQUEST['id']);
             //删除明细
             $error = model('ActivityScheduleDetail')->delScheduleDetail($obj->data['activity_id'],$_REQUEST['id']);
             if(empty($error))

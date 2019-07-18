@@ -40,7 +40,7 @@ class ActivityFavor extends Model
             ]);
             if($resval)
             {
-                $obj = $favor::get($id);
+                $obj = ActivityFavor::get($id);
                 if($obj)
                 {
                     return array('code' => 1000,

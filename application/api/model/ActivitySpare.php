@@ -49,7 +49,7 @@ class ActivitySpare extends Model
             ]);
             if($resval)
             {
-                $obj = $spare::get($id);
+                $obj = ActivitySpare::get($id);
                 if($obj)
                 {
                     return array('code' => 1000,

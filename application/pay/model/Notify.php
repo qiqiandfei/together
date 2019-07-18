@@ -63,8 +63,6 @@ class Notify extends WxPayNotify
             Log::error("微信支付回调：订单查询失败！");
             return false;
         }
-        else
-            model('order')->updorderstate($data['out_trade_no'],1,$data['openid'],round($data['total_fee']/100,2));
 
         return true;
     }
