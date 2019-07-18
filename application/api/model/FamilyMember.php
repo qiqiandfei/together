@@ -126,4 +126,93 @@ class FamilyMember extends Model
                 'message'=> $e->getMessage());
         }
     }
+
+    /**
+     * Notes:删除家庭成员
+     * @return array
+     * author: Fei
+     * Time: 2019/7/18 10:29
+     */
+    public function delFamilyMember()
+    {
+        try
+        {
+            $user = model('user')->getUserInfo_token($_REQUEST['token']);
+            $member = new FamilyMember();
+            $member->where('id',$_REQUEST['id'])
+                ->update(['is_delete'=>1,
+                    'operator' => $user['data']['id'],
+                    'operate_time'=>date('Y-m-d H:i:s', time())
+                    ]);
+            if(empty($member->error))
+            {
+                return array('code' => 1000,
+                    'data' => $member->getChangedData(),
+                    'message'=> '删除家庭成员成功！');
+            }
+            else
+            {
+                return array('code' => 3000,
+                    'data' => array(),
+                    'message'=> $member->error);
+            }
+        }
+        catch(\Exception $e)
+        {
+            return array('code' => 2000,
+                'data' => array(),
+                'message'=> $e->getMessage());
+        }
+    }
+
+
+    /**
+     * Notes:编辑家庭成员
+     * @return array
+     * author: Fei
+     * Time: 2019/7/18 10:49
+     */
+    public function editFamilyMember()
+    {
+        try
+        {
+            $user = model('user')->getUserInfo_token($_REQUEST['token']);
+            $member = new FamilyMember();
+            $familymember = FamilyMember::get($_REQUEST['id']);
+            if($familymember->data['user_id'] == $user['data']['id'])
+            {
+                $member->where('id',$_REQUEST['id'])
+                       ->where('is_delete',0)
+                       ->update(['member_title'=>$_REQUEST['member_title'],
+                        'is_head'=>$_REQUEST['is_head'],
+                        'operator' => $user['data']['id'],
+                        'operate_time'=>date('Y-m-d H:i:s', time())]);
+                if(empty($member->error))
+                {
+                    return array('code' => 1000,
+                        'data' => $member->getChangedData(),
+                        'message'=> '编辑家庭成员成功！');
+                }
+                else
+                {
+                    return array('code' => 3000,
+                        'data' => array(),
+                        'message'=> $member->error);
+                }
+            }
+            else
+            {
+                return array('code' => 4002,
+                    'data' => array(),
+                    'message'=> '只有一家之主才能编辑家庭成员！');
+            }
+
+        }
+        catch(\Exception $e)
+        {
+            return array('code' => 2000,
+                'data' => array(),
+                'message'=> $e->getMessage());
+        }
+    }
 }
