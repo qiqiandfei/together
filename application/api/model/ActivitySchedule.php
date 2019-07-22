@@ -114,7 +114,6 @@ class ActivitySchedule extends Model
         }
         catch(\Exception $e)
         {
-            $as->rollback();
             return array('code' => 2000,
                 'data' => array(),
                 'message'=> $e->getMessage());
@@ -263,7 +262,6 @@ class ActivitySchedule extends Model
         }
         catch(\Exception $e)
         {
-            $as->rollback();
             return array('code' => 2000,
                 'data' => array(),
                 'message'=> $e->getMessage());
@@ -309,7 +307,6 @@ class ActivitySchedule extends Model
         }
         catch(\Exception $e)
         {
-            $as->rollback();
             return array('code' => 2000,
                 'data' => array(),
                 'message'=> $e->getMessage());

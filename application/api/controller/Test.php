@@ -73,7 +73,11 @@ class Test extends  Controller
 
     public function pagetest()
     {
-        model('activity')->test();
+        //实例化模型
+        $model = new \app\api\model\Activity();
+        //创建活动
+        $res = $model->crtActivity($_REQUEST);
+        json($res['code'],$res['data'],$res['message']);
 
     }
 

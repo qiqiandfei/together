@@ -12,6 +12,20 @@
 </body>
 <script>
     function request() {
+        // var imgs = new Array();
+        // imgs['conver_img']='xxxxxxxxxxxxxxxxxxxx';
+        // imgs['img1']='xxxxxxxxxxxxxxxxxxxx';
+        // imgs['img2']='xxxxxxxxxxxxxxxxxxxx';
+        // imgs['img3']='xxxxxxxxxxxxxxxxxxxx';
+        // imgs['img4']='xxxxxxxxxxxxxxxxxxxx';
+        //
+        // var tt = JSON.stringify( imgs )
+
+        var imgs = {conver_img: "https://comeonkids.cn/uploads/2019-07-19/lL5DM20190719155307.jpg",
+        image1: "https://comeonkids.cn/uploads/2019-07-19/yWqdR20190719155307.jpg",
+        image2: "https://comeonkids.cn/uploads/2019-07-19/5Z01W20190719155307.jpg",
+        image3: "https://comeonkids.cn/uploads/2019-07-19/hPeva20190719155307.jpg"}
+        console.log(imgs);
     $.ajax({
         type:"POST",
         url:"{:url('api/test/pagetest')}",
@@ -25,23 +39,24 @@
             openid:"o7NIc5IOgZl3p5eKtDcHt1UD1nYI",
             encryptedData:"hgcFdn/vaMgRoFxU6PA5xmrI41lrWl+gd/JB47KtmAd8Tf215kMn2LJz8HuBkPv3yGjz2G2W9hM0QZuxxRmefN90k2zJAhOnk9GsfwzJA/R5yAJvVK2ruvrMXLWX/5PtErtaVWIGvoBrkaMRrbWKEed08cwJTFNajJk6fZHs00e5NGUu67/YYXUXF0m1h5E6OJACDJpZRyMs1pvqZhVEFiZbv5Xn0Q+n0+qjWGXdoIEnA64+MOzT3LRt00ts/lD01ZMqOU2hWrIlJwPq2siOKJv6lbnpP6SLiVBaZRZTqpFBXmrUZaj87vHo/mZ//tg6sEHKCP4ZAitJQY3jo3P2A5j6jTaVjVJ3616WOYt69pN8JxXFWqrrt1VSBO0Njih8dbYzSiV+1g4LpTTQ9ft7uBeyQRVprrUzpxkXnBm4EBJL8UZsT6I/HNphm1e9SoMYt+l70MS9bbLO+WA//GUgIMYPdmnABD0JfINuiyAplB8=",
             iv:"LIGi70aHYGiGuKMUvyJIwg==",
-            activity_name:"测试活动",
-            activity_type:1,
+            activityName:"测试活动",
+            activityType:1,
             activity_source:1,
-            begin_date:"2019-06-20",
-            end_date:"2019-06-23",
+            beginDate:"2019-06-20",
+            endDate:"2019-06-23",
             day_count:3,
-            departure_time:'09:00:00',
-            departure_address:"永定路中学门口",
-            average_budget:200,
-            need_pay:"",
-            registration_fee:0,
-            conver_img:"",
-            target_address:"上庄水库",
-            brief_introduction:"我是一个活动简介",
+            departureTime:'09:00:00',
+            departureAddress:"永定路中学门口",
+            averageBudget:200,
+            needPay:"",
+            registrationFee:0,
+            converImg:imgs,
+            targetAddress:"上庄水库",
+            briefIntroduction:"我是一个活动简介",
             remark:"我是一个备注",
-            allow_edit:0,
+            allowEdit:0,
             creator:"12341234",
+            templateId:0
             },
         success:function(data){
             // var res = $.parseJSON(data);

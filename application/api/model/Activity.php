@@ -29,20 +29,18 @@ class Activity extends Model
             $user = model('user')->getUserInfo_token($param['token']);
             //创建活动
             $id = Snowflake::getsnowId();
-            $images = json_decode($param['converImg']);
+            $images = json_decode($param['converImg'],true);
             $activity = new Activity();
             $activity->startTrans();
             $resval = $activity->validate(
                 [
                     'activity_name'  => 'require',
-                    'conver_img'   => 'require',
                     'target_address' => 'require',
                     'begin_date' => 'require',
                     'end_date' => 'require'
                 ],
                 [
                     'activity_name.require' => '活动名称不能为空！',
-                    'conver_img.require' => '封面图片不能为空！',
                     'target_address.require' => '目的地不能为空！',
                     'begin_date.require' => '开始日期不能为空！',
                     'end_date.require' => '结束日期不能为空！',
@@ -79,16 +77,17 @@ class Activity extends Model
                     //循环写入附件表
                     $attach = new ActivityAttach();
                     $attach->startTrans();
-
+                    $imagecount = 0;
                     foreach($images as $key=>$value)
                     {
+                        $imagecount++;
                         $attachid = Snowflake::getsnowId();
                         if($key == 'conver_img')
                         {
-                            $attach->save(['id'=>$attachid,
+                            $attach->isUpdate(false)->save(['id'=>$attachid,
                                 'activity_id'  => $id,
                                 'schedule_id' => 0,
-                                'attach_type' => '活动图片',
+                                'attach_type' => 1,
                                 'attach_explain' => '活动封面',
                                 'file_url' => $value,
                                 'creator' => $user['data']['id']
@@ -96,10 +95,10 @@ class Activity extends Model
                         }
                         else
                         {
-                            $attach->save(['id'=>$attachid,
+                            $attach->isUpdate(false)->save(['id'=>$attachid,
                                 'activity_id'  => $id,
                                 'schedule_id' => 0,
-                                'attach_type' => '活动图片',
+                                'attach_type' => 1,
                                 'attach_explain' => '活动介绍',
                                 'file_url' => $value,
                                 'creator' => $user['data']['id']
@@ -107,27 +106,38 @@ class Activity extends Model
                         }
                         if(!empty($attach->error))
                         {
+
                             $attachflg = false;
                             break;
                         }
                     }
-                    if($attachflg)
+                    if($attachflg and $imagecount > 0)
                     {
-                        $activity->commit();
                         $attach->commit();
+                        $activity->commit();
                         return array('code' => 1000,
                             'data' => $objactivity->data,
                             'message'=> '创建活动成功！');
                     }
                     else
                     {
-                        $activity->rollback();
-                        $attach->rollback();
-                        return array('code' => 4000,
-                            'data' => array(),
-                            'message'=> $attach->error);
+                        if(empty($attach->error))
+                        {
+                            $activity->rollback();
+                            $attach->rollback();
+                            return array('code' => 4005,
+                                'data' => array(),
+                                'message'=> '请选择一张图片封面！');
+                        }
+                        else
+                        {
+                            $activity->rollback();
+                            $attach->rollback();
+                            return array('code' => 4000,
+                                'data' => array(),
+                                'message'=> $attach->error);
+                        }
                     }
-
                 }
                 else
                 {
@@ -147,7 +157,6 @@ class Activity extends Model
         }
         catch (\Exception $e)
         {
-            $activity->rollback();
             return array('code' => 2000,
                 'data' => array(),
                 'message'=> $e->getMessage());
