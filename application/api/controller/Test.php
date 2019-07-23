@@ -76,7 +76,7 @@ class Test extends  Controller
         //实例化模型
         $model = new \app\api\model\Activity();
         //创建活动
-        $res = $model->crtActivity($_REQUEST);
+        $res = $model->getActivity();
         json($res['code'],$res['data'],$res['message']);
 
     }

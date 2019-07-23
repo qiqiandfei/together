@@ -187,11 +187,28 @@ class Activity extends Model
                 else
                 {
                     $rescrt = [];
+                    $attach = [];
+                    $activitypics = [];
                     $crtactivitys = Activity::where(['creator'=>$userid,'is_delete'=>0])->select();
                     foreach ($rescrt as $item)
+                    {
                         array_push($rescrt,$item->data);
+                        $pics = ActivityAttach::where('activity_id',$item->data['id'])->select();
+                        if(count($pics) > 0)
+                        {
+                            foreach($pics as $pic)
+                                array_push($attach,$pic->data);
+                            array_push($activitypics,$attach);
+                        }
+                        else
+                        {
+                            array_push($activitypics,$item->data['id'].'该活动暂无图片');
+                        }
+                    }
+
+
                     if($crtactivitys)
-                        return array('code'=>1000,'data'=>$rescrt,'message'=>'获取活动成功！');
+                        return array('code'=>1000,'data'=>array('activitys'=>$rescrt,'pics'=>$activitypics),'message'=>'获取活动成功！');
                     else
                         return array('code'=>1000,'data'=>array(),'message'=>'没有相关活动！');
                 }
@@ -208,14 +225,29 @@ class Activity extends Model
                 else
                 {
                     $join = [];
+                    $attach = [];
+                    $activitypics = [];
                     $joinactivitys = ActivityAttender::where(['family_member_id'=>$userid,'is_delete'=>0])
                         ->where('attend_state','=',0)
                         ->select();
                     foreach($joinactivitys as $item)
+                    {
                         array_push($join,$item->data);
+                        $pics = ActivityAttach::where('activity_id',$item->data['id'])->select();
+                        if(count($pics) > 0)
+                        {
+                            foreach($pics as $pic)
+                                array_push($attach,$pic->data);
+                            array_push($activitypics,$attach);
+                        }
+                        else
+                        {
+                            array_push($activitypics,$item->data['id'].'该活动暂无图片');
+                        }
+                    }
 
                     if($joinactivitys)
-                        return array('code'=>1000,'data'=>$join,'message'=>'获取活动成功！');
+                        return array('code'=>1000,'data'=>array('activitys'=>$join,'pics'=>$activitypics),'message'=>'获取活动成功！');
                     else
                         return array('code'=>1000,'data'=>array(),'message'=>'没有相关活动！');
                 }
@@ -231,22 +263,30 @@ class Activity extends Model
                 else
                 {
                     $about = array();
-                    //创建的
-                    $crtactivitys = Activity::where(['creator'=>$userid,'is_delete'=>0])->select();
-                    foreach($crtactivitys as $item)
+                    $attach = [];
+                    $activitypics = [];
+                    //有关的
+                    $aboutactivitys = Activity::WhereOr([
+                        'creator'=>$userid,
+                        'family_member_id'=>$userid])
+                        ->where('is_delete',0)->select();
+                    foreach($aboutactivitys as $item)
                     {
                         array_push($about,$item);
-                    }
-                    //参与的
-                    $joinactivitys = ActivityAttender::where(['family_member_id'=>$userid,'is_delete'=>0])
-                        ->where('attend_state','=',0)
-                        ->select();
-                    foreach($joinactivitys as $item)
-                    {
-                        array_push($about,$item);
+                        $pics = ActivityAttach::where('activity_id',$item->data['id'])->select();
+                        if(count($pics) > 0)
+                        {
+                            foreach($pics as $pic)
+                                array_push($attach,$pic->data);
+                            array_push($activitypics,$attach);
+                        }
+                        else
+                        {
+                            array_push($activitypics,$item->data['id'].'该活动暂无图片');
+                        }
                     }
                     if($about)
-                        return array('code'=>1000,'data'=>$about,'message'=>'获取活动成功！');
+                        return array('code'=>1000,'data'=>array('activity'=>$about,'pics'=>$activitypics),'message'=>'获取活动成功！');
                     else
                         return array('code'=>1000,'data'=>array(),'message'=>'没有相关活动！');
                 }
@@ -255,11 +295,27 @@ class Activity extends Model
             elseif($type == 4)
             {
                 $res = [];
+                $activitypics = [];
                 $allactivitys = Activity::where('is_delete',0)->select();
                 foreach ($allactivitys as $item)
+                {
+                    $attach = [];
                     array_push($res,$item->data);
+                    $pics = ActivityAttach::where('activity_id',$item->data['id'])->select();
+                    if(count($pics) > 0)
+                    {
+                        foreach($pics as $pic)
+                            array_push($attach,$pic->data);
+                        array_push($activitypics,$attach);
+                    }
+                    else
+                    {
+                        array_push($activitypics,$item->data['id'].'该活动暂无图片');
+                    }
+                }
+
                 if($allactivitys)
-                    return array('code'=>1000,'data'=>$res,'message'=>'获取活动成功！');
+                    return array('code'=>1000,'data'=>array('activity'=>$res,'pics'=>$activitypics),'message'=>'获取活动成功！');
                 else
                     return array('code'=>1000,'data'=>array(),'message'=>'没有相关活动！');
             }
@@ -282,11 +338,24 @@ class Activity extends Model
     {
         try
         {
+            $activitypics = [];
+            $attach = [];
             $activity = Activity::where(['id'=>$_REQUEST['id'],'is_delete'=>0])->find();
+            $pics = ActivityAttach::where('activity_id',$_REQUEST['id'])->select();
+            if(count($pics) > 0)
+            {
+                foreach($pics as $pic)
+                    array_push($attach,$pic->data);
+                array_push($activitypics,$attach);
+            }
+            else
+            {
+                array_push($activitypics,'该活动暂无图片');
+            }
             if($activity)
             {
                 return array('code' => 1000,
-                'data' => $activity->data,
+                'data' => array('activity'=>$activity->data,'pics'=>$activitypics),
                 'message'=> '获取活动成功！');
             }
             else
