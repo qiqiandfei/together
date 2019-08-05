@@ -215,4 +215,65 @@ class FamilyMember extends Model
                 'message'=> $e->getMessage());
         }
     }
+
+    /**
+     * Notes:获取家庭成员
+     * @return array
+     * author: Fei
+     * Time: 2019/8/5 13:30
+     */
+    public function getFamilyMember()
+    {
+        try
+        {
+            $user = model('user')->getUserInfo_token($_REQUEST['token']);
+            $familymember = FamilyMember::where(['user_id'=>$user['data']['id'],
+            'is_delete'=>0])->order('create_time','desc')->select();
+
+            if($familymember)
+            {
+                $familys = [];
+                foreach ($familymember as $item)
+                {
+                    $family = [];
+                    $members = FamilyMember::where(['family_id'=>$item->data['family_id'],
+                        'is_delete'=>0])->where('user_id','<>',$user['data']['id'])
+                        ->order('create_time','desc')->select();
+
+                    if($members)
+                    {
+                        foreach ($members as $member)
+                            array_push($family,$member->data);
+                    }
+                    else
+                    {
+                        return array('code' => 1200,
+                            'data' => array(),
+                            'message'=> '家庭暂无其他成员!');
+                    }
+                    if(!$family)
+                        array_push($familys,$family);
+                }
+
+                if($familys)
+                {
+                    return array('code' => 1000,
+                        'data' => array('familymember'=>$familys),
+                        'message'=> '获取家庭成员成功！');
+                }
+            }
+            else
+            {
+                return array('code' => 1200,
+                    'data' => array(),
+                    'message'=> '请先创建家庭!');
+            }
+        }
+        catch(\Exception $e)
+        {
+            return array('code' => 2000,
+                'data' => array(),
+                'message'=> $e->getMessage());
+        }
+    }
 }

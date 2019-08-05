@@ -158,8 +158,9 @@ class ActivitySchedule extends Model
                 'data' => array(),
                 'message'=> $e->getMessage());
         }
-
     }
+
+
 
     /**
      * Notes:编辑行程信息
@@ -174,7 +175,6 @@ class ActivitySchedule extends Model
         $as->startTrans();
         try
         {
-
             $user = model('user')->getUserInfo_token($_REQUEST['token']);
 
             if(empty($_REQUEST['leaderId']))
