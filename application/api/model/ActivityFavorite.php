@@ -26,6 +26,23 @@ class ActivityFavorite extends  Model
             $user = model('user')->getUserInfo_token($_REQUEST['token']);
 
             $favorite = new ActivityFavorite();
+            $activity = $favorite->where(['activity_id'=>$_REQUEST['activityId'],'user_id'=>$user['data']['id']])->find();
+            if($activity)
+            {
+                $favorite->where(['activity_id'=>$_REQUEST['activityId'],'user_id'=>$user['data']['id']])->delete();
+                if(empty($favorite->error))
+                {
+                    return array('code' => 1000,
+                        'data' => array(),
+                        'message'=> '取消活动收藏成功！');
+                }
+                else
+                {
+                    return array('code' => 1100,
+                        'data' => array(),
+                        'message'=> $favorite->error);
+                }
+            }
             $id = Snowflake::getsnowId();
             $resval = $favorite->validate(
                 [
