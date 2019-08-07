@@ -12,7 +12,7 @@ namespace app\api\model;
 use Snowflake;
 use think\Model;
 
-class FamilyMember extends Model
+class ActivityFamilyMember extends Model
 {
     /**
      * Notes:新增家庭成员
@@ -24,20 +24,9 @@ class FamilyMember extends Model
     {
         try
         {
-            $activityid = 0;
             $user = model('user')->getUserInfo_token($_REQUEST['token']);
-            if($_REQUEST['userid'] == 0)
-            {
-                $userid = $user['data']['id'];
-            }
-            else
-            {
-                $userid = $_REQUEST['userid'];
-                $activityid = $_REQUEST['activityid'];
-            }
 
-            $member = new FamilyMember();
-            $member->startTrans();
+            $member = new ActivityFamilyMember();
             $id = Snowflake::getsnowId();
             $resval = $member->validate(
                 [
@@ -47,8 +36,10 @@ class FamilyMember extends Model
                     'member_title.require' => '称谓不能为空！',
                 ]
             )->save(['id' => $id,
+                    'activity_id'=>$_REQUEST['activityid'],
                     'family_id' => $_REQUEST['familyid'],
-                    'user_id' => $userid,
+                    'user_id' => $_REQUEST['userid'],
+                    'user_name'=>$_REQUEST['user_name'],
                     'member_title' => $_REQUEST['membertitle'],
                     'is_head' => $_REQUEST['ishead'],
                     'is_delete' => 0,
@@ -56,60 +47,18 @@ class FamilyMember extends Model
                 ]);
             if($resval)
             {
-                //活动不为零的时候更新活动成员表的家庭id
-                if($activityid != 0)
+                $obj = ActivityFamilyMember::get($id);
+                if($obj)
                 {
-                    $attender = new ActivityAttender();
-                    $attender->startTrans();
-                    $attender->where(['family_member_id'=>$userid,
-                        'activity_id'=>$activityid])
-                        ->update(['family_id'=>$_REQUEST['familyid']]);
-                    if(empty($attender->error))
-                    {
-                        $obj = FamilyMember::get($id);
-                        if($obj)
-                        {
-                            $attender->commit();
-                            $member->commit();
-                            return array('code' => 1000,
-                                'data' => $obj->data,
-                                'message'=> '创建家庭成员成功！');
-                        }
-                        else
-                        {
-                            $attender->rollback();
-                            $member->rollback();
-                            return array('code' => 3000,
-                                'data' => array(),
-                                'message'=> $member->error);
-                        }
-                    }
-                    else
-                    {
-                        $attender->rollback();
-                        $member->rollback();
-                        return array('code' => 3000,
-                            'data' => array(),
-                            'message'=> $member->error);
-                    }
+                    return array('code' => 1000,
+                        'data' => $obj->data,
+                        'message'=> '创建家庭成员成功！');
                 }
                 else
                 {
-                    $obj = FamilyMember::get($id);
-                    if($obj)
-                    {
-                        $member->commit();
-                        return array('code' => 1000,
-                            'data' => $obj->data,
-                            'message'=> '创建家庭成员成功！');
-                    }
-                    else
-                    {
-                        $member->rollback();
-                        return array('code' => 3000,
-                            'data' => array(),
-                            'message'=> $member->error);
-                    }
+                    return array('code' => 3000,
+                        'data' => array(),
+                        'message'=> $member->error);
                 }
             }
             else
@@ -138,7 +87,7 @@ class FamilyMember extends Model
         try
         {
             $user = model('user')->getUserInfo_token($_REQUEST['token']);
-            $member = new FamilyMember();
+            $member = new ActivityFamilyMember();
             $member->where('id',$_REQUEST['id'])
                 ->update(['is_delete'=>1,
                     'operator' => $user['data']['id'],
@@ -177,8 +126,8 @@ class FamilyMember extends Model
         try
         {
             $user = model('user')->getUserInfo_token($_REQUEST['token']);
-            $member = new FamilyMember();
-            $familymember = FamilyMember::get($_REQUEST['id']);
+            $member = new ActivityFamilyMember();
+            $familymember = ActivityFamilyMember::get($_REQUEST['id']);
             if($familymember->data['user_id'] == $user['data']['id'])
             {
                 $member->where('id',$_REQUEST['id'])
@@ -227,7 +176,7 @@ class FamilyMember extends Model
         try
         {
             $user = model('user')->getUserInfo_token($_REQUEST['token']);
-            $familymember = FamilyMember::where(['user_id'=>$user['data']['id'],
+            $familymember = ActivityFamilyMember::where(['user_id'=>$user['data']['id'],
             'is_delete'=>0])->order('create_time','desc')->select();
 
             if($familymember)
@@ -236,7 +185,7 @@ class FamilyMember extends Model
                 foreach ($familymember as $item)
                 {
                     $family = [];
-                    $members = FamilyMember::where(['family_id'=>$item->data['family_id'],
+                    $members = ActivityFamilyMember::where(['family_id'=>$item->data['family_id'],
                         'is_delete'=>0])->where('user_id','<>',$user['data']['id'])
                         ->order('create_time','desc')->select();
 

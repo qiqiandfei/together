@@ -11,7 +11,7 @@ namespace app\api\controller;
 
 use think\Controller;
 
-class FamilyMember extends Controller
+class ActivityFamilyMember extends Controller
 {
     /**
      * Notes:添加家庭成员
@@ -31,7 +31,7 @@ class FamilyMember extends Controller
         if($checkres['code'] == 1000)
         {
             //实例化模型
-            $model = new \app\api\model\FamilyMember();
+            $model = new \app\api\model\ActivityFamilyMember();
             //创建活动
             $res = $model->addFamilymember();
             json($res['code'],$res['data'],$res['message']);
@@ -60,7 +60,7 @@ class FamilyMember extends Controller
         if($checkres['code'] == 1000)
         {
             //实例化模型
-            $model = new \app\api\model\FamilyMember();
+            $model = new \app\api\model\ActivityFamilyMember();
             //创建活动
             $res = $model->delFamilymember();
             json($res['code'],$res['data'],$res['message']);
@@ -89,7 +89,7 @@ class FamilyMember extends Controller
         if($checkres['code'] == 1000)
         {
             //实例化模型
-            $model = new \app\api\model\FamilyMember();
+            $model = new \app\api\model\ActivityFamilyMember();
             //创建活动
             $res = $model->editFamilymember();
             json($res['code'],$res['data'],$res['message']);
@@ -118,7 +118,7 @@ class FamilyMember extends Controller
         if($checkres['code'] == 1000)
         {
             //实例化模型
-            $model = new \app\api\model\FamilyMember();
+            $model = new \app\api\model\ActivityFamilyMember();
             //创建活动
             $res = $model->getFamilyMember();
             json($res['code'],$res['data'],$res['message']);

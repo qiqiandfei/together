@@ -189,8 +189,10 @@ class Activity extends Model
                     $rescrt = [];
                     $attach = [];
                     $activitypics = [];
+                    $favorcount = [];
+                    $favoritecount = [];
                     $crtactivitys = Activity::where(['creator'=>$userid,'is_delete'=>0])->select();
-                    foreach ($rescrt as $item)
+                    foreach ($crtactivitys as $item)
                     {
                         array_push($rescrt,$item->data);
                         $pics = ActivityAttach::where('activity_id',$item->data['id'])->select();
@@ -204,11 +206,14 @@ class Activity extends Model
                         {
                             array_push($activitypics,$item->data['id'].'该活动暂无图片');
                         }
+                        //获取点赞数量
+                        array_push($favorcount,ActivityFavor::where('activity_id',$item->data['id'])->count());
+                        //获取收藏数量
+                        array_push($favoritecount,ActivityFavorite::where('activity_id',$item->data['id'])->count());
                     }
 
-
                     if($crtactivitys)
-                        return array('code'=>1000,'data'=>array('activitys'=>$rescrt,'pics'=>$activitypics),'message'=>'获取活动成功！');
+                        return array('code'=>1000,'data'=>array('activitys'=>$rescrt,'pics'=>$activitypics,'favorcount'=>$favorcount,'favoritecount'=>$favoritecount),'message'=>'获取活动成功！');
                     else
                         return array('code'=>1000,'data'=>array(),'message'=>'没有相关活动！');
                 }
@@ -227,6 +232,8 @@ class Activity extends Model
                     $join = [];
                     $attach = [];
                     $activitypics = [];
+                    $favorcount = [];
+                    $favoritecount = [];
                     $joinactivitys = ActivityAttender::where(['family_member_id'=>$userid,'is_delete'=>0])
                         ->where('attend_state','=',0)
                         ->select();
@@ -244,10 +251,14 @@ class Activity extends Model
                         {
                             array_push($activitypics,$item->data['id'].'该活动暂无图片');
                         }
+                        //获取点赞数量
+                        array_push($favorcount,ActivityFavor::where('activity_id',$item->data['id'])->count());
+                        //获取收藏数量
+                        array_push($favoritecount,ActivityFavorite::where('activity_id',$item->data['id'])->count());
                     }
 
                     if($joinactivitys)
-                        return array('code'=>1000,'data'=>array('activitys'=>$join,'pics'=>$activitypics),'message'=>'获取活动成功！');
+                        return array('code'=>1000,'data'=>array('activitys'=>$join,'pics'=>$activitypics,'favorcount'=>$favorcount,'favoritecount'=>$favoritecount),'message'=>'获取活动成功！');
                     else
                         return array('code'=>1000,'data'=>array(),'message'=>'没有相关活动！');
                 }
@@ -265,6 +276,8 @@ class Activity extends Model
                     $about = array();
                     $attach = [];
                     $activitypics = [];
+                    $favorcount = [];
+                    $favoritecount = [];
                     //有关的
                     $aboutactivitys = Activity::WhereOr([
                         'creator'=>$userid,
@@ -284,9 +297,13 @@ class Activity extends Model
                         {
                             array_push($activitypics,$item->data['id'].'该活动暂无图片');
                         }
+                        //获取点赞数量
+                        array_push($favorcount,ActivityFavor::where('activity_id',$item->data['id'])->count());
+                        //获取收藏数量
+                        array_push($favoritecount,ActivityFavorite::where('activity_id',$item->data['id'])->count());
                     }
                     if($about)
-                        return array('code'=>1000,'data'=>array('activity'=>$about,'pics'=>$activitypics),'message'=>'获取活动成功！');
+                        return array('code'=>1000,'data'=>array('activity'=>$about,'pics'=>$activitypics,'favorcount'=>$favorcount,'favoritecount'=>$favoritecount),'message'=>'获取活动成功！');
                     else
                         return array('code'=>1000,'data'=>array(),'message'=>'没有相关活动！');
                 }
@@ -296,6 +313,8 @@ class Activity extends Model
             {
                 $res = [];
                 $activitypics = [];
+                $favorcount = [];
+                $favoritecount = [];
                 $allactivitys = Activity::where('is_delete',0)->select();
                 foreach ($allactivitys as $item)
                 {
@@ -312,10 +331,14 @@ class Activity extends Model
                     {
                         array_push($activitypics,$item->data['id'].'该活动暂无图片');
                     }
+                    //获取点赞数量
+                    array_push($favorcount,ActivityFavor::where('activity_id',$item->data['id'])->count());
+                    //获取收藏数量
+                    array_push($favoritecount,ActivityFavorite::where('activity_id',$item->data['id'])->count());
                 }
 
                 if($allactivitys)
-                    return array('code'=>1000,'data'=>array('activity'=>$res,'pics'=>$activitypics),'message'=>'获取活动成功！');
+                    return array('code'=>1000,'data'=>array('activity'=>$res,'pics'=>$activitypics,'favorcount'=>$favorcount,'favoritecount'=>$favoritecount),'message'=>'获取活动成功！');
                 else
                     return array('code'=>1000,'data'=>array(),'message'=>'没有相关活动！');
             }
