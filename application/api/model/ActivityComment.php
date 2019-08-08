@@ -89,25 +89,22 @@ class ActivityComment extends Model
         {
             //获取所有评论
             $allcomments = [];
-            //一个父级评论下的所有评论
-            $subcomments =[];
 
             //针对某个活动的所有评论
             if($_REQUEST['scheduleId'] == 0)
             {
                 //获取所有评论的根
                 $comments = ActivityComment::where(['is_delete'=>0,
-                    'activity_id'=>$_REQUEST['activityId'],
-                    'parent_id'=>0
+                    'activity_id'=>$_REQUEST['activityId']
                 ])->order('create_time')->select();
 
                 foreach ($comments as $item)
                 {
                     array_push($allcomments,$item->data);
 
-                    $subcomments = $this->getAllComments($item->data);
-                    foreach ($subcomments as $subitem)
-                        array_push($allcomments,$subitem);
+//                    $subcomments = $this->getAllComments($item->data);
+//                    foreach ($subcomments as $subitem)
+//                        array_push($allcomments,$subitem);
                 }
 
             }
@@ -117,17 +114,16 @@ class ActivityComment extends Model
                 //获取所有评论的根
                 $comments = ActivityComment::where(['is_delete'=>0,
                     'activity_id'=>$_REQUEST['activityId'],
-                    'schedule_id'=>$_REQUEST['scheduleId'],
-                    'parent_id'=>0
+                    'schedule_id'=>$_REQUEST['scheduleId']
                 ])->order('create_time')->select();
 
                 foreach ($comments as $item)
                 {
                     array_push($allcomments,$item->data);
 
-                    $subcomments = $this->getAllComments($item->data);
-                    foreach ($subcomments as $subitem)
-                        array_push($allcomments,$subitem);
+//                    $subcomments = $this->getAllComments($item->data);
+//                    foreach ($subcomments as $subitem)
+//                        array_push($allcomments,$subitem);
                 }
             }
             if(count($allcomments) > 0)
@@ -325,7 +321,7 @@ class ActivityComment extends Model
         if($_REQUEST['scheduleId'] == 0)
         {
             $soncomments = ActivityComment::where(['is_delete'=>0,
-                'activityId'=>$_REQUEST['activity_id'],
+                'activity_id'=>$_REQUEST['activityId'],
                 'parent_id'=>$comment['id']])->order('create_time')->select();
 
             if(count($soncomments) > 0)
@@ -333,7 +329,7 @@ class ActivityComment extends Model
                 foreach ($soncomments as $item)
                 {
                     array_push($comments,$item->data);
-                    getAllComments($item->data,$comments);
+                    $this->getAllComments($item->data,$comments);
                 }
             }
             else
@@ -351,7 +347,7 @@ class ActivityComment extends Model
                 foreach ($soncomments as $item)
                 {
                     array_push($comments,$item->data);
-                    getAllComments($item->data,$comments);
+                    $this->getAllComments($item->data,$comments);
                 }
             }
             else

@@ -510,6 +510,8 @@ class Activity extends Model
     }
 
 
+
+
     /**
      * Notes:计算两个日期相差多少天
      * @param $day1

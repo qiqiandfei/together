@@ -193,6 +193,47 @@ class ActivityAttender extends Model
     }
 
     /**
+     * Notes:获取参与活动家庭
+     * @return array
+     * author: Fei
+     * Time: 2019/8/8 13:16
+     */
+    public function getActivityFamily()
+    {
+        try
+        {
+            $activityfamily = ActivityAttender::where('activity_id',$_REQUEST['activityId'])
+                ->where('attend_state',1)
+                ->distinct('family_id')
+                ->select();
+            if(count($activityfamily) > 0)
+            {
+                $familys = [];
+                foreach ($activityfamily as $item)
+                {
+                    array_push($familys,$item->data);
+                }
+                return array('code' => 1000,
+                    'data' => array('familys'=>$familys),
+                    'message'=> '获取活动家庭成功！');
+            }
+            else
+            {
+                return array('code' => 1000,
+                    'data' => array(),
+                    'message'=> '暂无家庭加入！');
+            }
+
+        }
+        catch (\Exception $e)
+        {
+            return array('code' => 2000,
+                'data' => array(),
+                'message'=> $e->getMessage());
+        }
+    }
+
+    /**
      * Notes:获取参加活动用户
      * @return array
      * author: Fei
