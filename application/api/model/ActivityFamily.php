@@ -28,6 +28,13 @@ class ActivityFamily extends Model
         {
             $user = model('user')->getUserInfo_token($_REQUEST['token']);
             $family = new ActivityFamily();
+            $familydata = $family->where(['activity_id'=>$_REQUEST['activity_id'],'creator'=>$user['data']['id']])->find();
+            if($familydata)
+            {
+                return array('code' => 4001,
+                    'data' => array(),
+                    'message'=> '已经在本活动中创建过家庭！');
+            }
             $id = Snowflake::getsnowId();
             $resval = $family->validate(
                 [

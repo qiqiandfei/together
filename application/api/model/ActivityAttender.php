@@ -60,7 +60,7 @@ class ActivityAttender extends Model
             $aa->save(['id' => $id,
                 'activity_id' => $_REQUEST['activity_id'],
                 'family_id' => $_REQUEST['family_id'],
-                'family_member_id' => $user['id'],
+                'family_member_id' => $user['data']['id'],
                 'nick_name' => $nickname,
                 'contact_number' => $contactNumber,
                 'creator'=>$user['data']['id']
