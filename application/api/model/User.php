@@ -166,9 +166,13 @@ class User extends Model
     {
         $res = User::get($userid);
         if($res)
-            return $res->getData();
+            return array('code' => 1000,
+                'data' => $res->data,
+                'message'=> '获取用户信息成功！');
         else
-            return null;
+            return array('code' => 5000,
+                'data' => array(),
+                'message'=> '获取用户信息失败');
     }
 
     /**
@@ -225,7 +229,7 @@ class User extends Model
         $request = Request::instance();
         $userid = aesdecrypt($token);
         $res = $this->getUserInfo_userid($userid);
-        User::where('id',$res['id'])->update(
+        User::where('id',$res['data']['id'])->update(
             [
                 'last_login_time'=> date('Y-m-d H:i:s', time()),
                 'last_login_ip' => $request->ip()

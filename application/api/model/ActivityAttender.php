@@ -54,8 +54,20 @@ class ActivityAttender extends Model
                 $contactNumber = $user['data']['mobile'];
             }
 
-
+            //判断是否已经加入活动
             $aa = new ActivityAttender();
+            $join = $aa->where('activity_id',$_REQUEST['activity_id'])
+                ->where('family_member_id',$user['data']['id'])
+                ->where('attend_state','=',1)
+                ->find();
+
+            if($join)
+            {
+                return array('code' => 3000,
+                    'data' => $join->data,
+                    'message'=> '用户已经加入该活动');
+            }
+
             $id = Snowflake::getsnowId();
             $aa->save(['id' => $id,
                 'activity_id' => $_REQUEST['activity_id'],

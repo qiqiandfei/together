@@ -177,16 +177,14 @@ class ActivityFamilyMember extends Model
         {
             $user = model('user')->getUserInfo_token($_REQUEST['token']);
             $familymember = ActivityFamilyMember::where(['user_id'=>$user['data']['id'],
-            'is_delete'=>0])->order('create_time','desc')->select();
-
+            'is_delete'=>0,'activity_id'=>$_REQUEST['activityId']])->order('create_time','desc')->select();
+            $family = [];
             if($familymember)
             {
-                $familys = [];
                 foreach ($familymember as $item)
                 {
-                    $family = [];
                     $members = ActivityFamilyMember::where(['family_id'=>$item->data['family_id'],
-                        'is_delete'=>0])->where('user_id','<>',$user['data']['id'])
+                        'is_delete'=>0,'activity_id'=>$_REQUEST['activityId']])
                         ->order('create_time','desc')->select();
 
                     if($members)
@@ -198,16 +196,14 @@ class ActivityFamilyMember extends Model
                     {
                         return array('code' => 1200,
                             'data' => array(),
-                            'message'=> '家庭暂无其他成员!');
+                            'message'=> '家庭中没有任何成员!');
                     }
-                    if(!$family)
-                        array_push($familys,$family);
                 }
 
-                if($familys)
+                if($family)
                 {
                     return array('code' => 1000,
-                        'data' => array('familymember'=>$familys),
+                        'data' => array('familymember'=>$family),
                         'message'=> '获取家庭成员成功！');
                 }
             }

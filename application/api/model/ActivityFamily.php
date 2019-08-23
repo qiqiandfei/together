@@ -28,6 +28,7 @@ class ActivityFamily extends Model
         {
             $user = model('user')->getUserInfo_token($_REQUEST['token']);
             $family = new ActivityFamily();
+            $family->startTrans();
             $familydata = $family->where(['activity_id'=>$_REQUEST['activity_id'],'creator'=>$user['data']['id']])->find();
             if($familydata)
             {
@@ -54,17 +55,34 @@ class ActivityFamily extends Model
                     'member_count' => $_REQUEST['member_count'],
                     'creator' => $user['data']['id']
                     ]);
+
+            $member = new ActivityFamilyMember();
+            $member->startTrans();
+            $memberid = Snowflake::getsnowId();
+            $member->save([
+                'id'=>$memberid,
+                'activity_id'=>$_REQUEST['activity_id'],
+                'family_id'=>$id,
+                'user_id'=>$user['data']['id'],
+                'user_name'=>$user['data']['nick_name'],
+                'member_title'=>'',
+                'is_head'=>1,
+                'creator'=>$user['data']['id']]);
             if($resval)
             {
                 $obj = ActivityFamily::get($id);
-                if($obj)
+                if(empty($family->error) && empty($member->error))
                 {
+                    $family->commit();
+                    $member->commit();
                     return array('code' => 1000,
                         'data' => $obj->data,
                         'message'=> '创建家庭成功！');
                 }
                 else
                 {
+                    $family->rollback();
+                    $member->rollback();
                     return array('code' => 3000,
                         'data' => array(),
                         'message'=> $family->error);
@@ -72,6 +90,8 @@ class ActivityFamily extends Model
             }
             else
             {
+                $family->rollback();
+                $member->rollback();
                 return array('code' => 4001,
                     'data' => array(),
                     'message'=> $family->error);
@@ -156,6 +176,55 @@ class ActivityFamily extends Model
      * Time: 2019/8/7 10:29
      */
     public function getFamily()
+    {
+        try
+        {
+            $user = model('user')->getUserInfo_token($_REQUEST['token']);
+            $attender = ActivityAttender::where(['activity_id'=>$_REQUEST['activityId'],'family_member_id'=>$user['data']['id']])->find();
+            if(!$attender)
+            {
+                return array(
+                    'code' => 1200,
+                    'data' => array(),
+                    'message'=> '请先加入活动！'
+                );
+            }
+            $familyid = $attender->data['family_id'];
+            $family = new ActivityFamily();
+            $familyinfo = $family->where(['activity_id'=>$_REQUEST['activityId'],'id'=>$familyid])->find();
+            if(empty($family->error))
+            {
+                return array(
+                    'code' => 1000,
+                    'data' => $familyinfo->data,
+                    'message'=> '获取家庭信息成功！'
+                );
+            }
+            else
+            {
+                return array(
+                    'code' => 1100,
+                    'data' => array(),
+                    'message'=> $family->error
+                );
+            }
+        }
+        catch(\Exception $e)
+        {
+            return array('code' => 2000,
+                'data' => array(),
+                'message'=> $e->getMessage());
+        }
+    }
+
+
+    /**
+     * Notes:获取我的家庭信息
+     * @return array
+     * author: Fei
+     * Time: 2019/8/22 8:57
+     */
+    public function getMyFamily()
     {
         try
         {
