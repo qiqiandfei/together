@@ -104,7 +104,11 @@ class ActivityFavorite extends  Model
             {
                 $favorit = [];
                 foreach ($acitvitys as $item)
-                    array_push($favorit,$item->data);
+                {
+                    $activity = Activity::where('id',$item->data['activity_id'])->find();
+                    array_push($favorit,$activity->data);
+                }
+
                 return array('code' => 1000,
                 'data' => array('favorit'=>$favorit),
                 'message'=> '获取收藏活动成功！');

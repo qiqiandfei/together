@@ -234,8 +234,8 @@ class Activity extends Model
                     $activitypics = [];
                     $favorcount = [];
                     $favoritecount = [];
-                    $joinactivitys = ActivityAttender::where(['family_member_id'=>$userid,'is_delete'=>0])
-                        ->where('attend_state','=',0)
+                    $joinactivitys = ActivityAttender::where('family_member_id',$userid)
+                        ->where('attend_state','=',1)
                         ->select();
                     foreach($joinactivitys as $item)
                     {
@@ -273,19 +273,34 @@ class Activity extends Model
                         'message'=> 'userid不能为空！');
                 else
                 {
-                    $about = array();
                     $attach = [];
                     $activitypics = [];
                     $favorcount = [];
                     $favoritecount = [];
                     //有关的
-                    $aboutactivitys = Activity::WhereOr([
-                        'creator'=>$userid,
-                        'family_member_id'=>$userid])
+                    $aboutactivitys = Activity::where('creator',$userid)
                         ->where('is_delete',0)->select();
+                    $joinactivitys = ActivityAttender::where('family_member_id',$userid)
+                        ->where('attend_state','=',1)
+                        ->select();
+                    foreach ($joinactivitys as $joinitem)
+                    {
+                        $activity = Activity::get($joinitem->data['activity_id']);
+                        $existflg = false;
+                        foreach ($aboutactivitys as $item)
+                        {
+                            if($item->data['id'] == $activity->data['id'])
+                            {
+                                $existflg = true;
+                                break;
+                            }
+
+                        }
+                        if(!$existflg)
+                            array_push($aboutactivitys,$activity);
+                    }
                     foreach($aboutactivitys as $item)
                     {
-                        array_push($about,$item);
                         $pics = ActivityAttach::where('activity_id',$item->data['id'])->select();
                         if(count($pics) > 0)
                         {
@@ -302,8 +317,8 @@ class Activity extends Model
                         //获取收藏数量
                         array_push($favoritecount,ActivityFavorite::where('activity_id',$item->data['id'])->count());
                     }
-                    if($about)
-                        return array('code'=>1000,'data'=>array('activity'=>$about,'pics'=>$activitypics,'favorcount'=>$favorcount,'favoritecount'=>$favoritecount),'message'=>'获取活动成功！');
+                    if($aboutactivitys)
+                        return array('code'=>1000,'data'=>array('activity'=>$aboutactivitys,'pics'=>$activitypics,'favorcount'=>$favorcount,'favoritecount'=>$favoritecount),'message'=>'获取活动成功！');
                     else
                         return array('code'=>1000,'data'=>array(),'message'=>'没有相关活动！');
                 }

@@ -58,7 +58,7 @@ class Activity extends Controller
         //验证请求是否合法
         if($checkres['code'] == 1000)
         {
-            $userid = $_REQUEST['userId'];
+            $userid = $_REQUEST['id'];
             $type = $_REQUEST['type'];
             //实例化模型
             $model = new \app\api\model\Activity();
