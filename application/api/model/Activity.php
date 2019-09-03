@@ -237,9 +237,11 @@ class Activity extends Model
                     $joinactivitys = ActivityAttender::where('family_member_id',$userid)
                         ->where('attend_state','=',1)
                         ->select();
+
                     foreach($joinactivitys as $item)
                     {
-                        array_push($join,$item->data);
+                        $activity = Activity::get($item->data['activity_id']);
+                        array_push($join,$activity->data);
                         $pics = ActivityAttach::where('activity_id',$item->data['id'])->select();
                         if(count($pics) > 0)
                         {

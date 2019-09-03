@@ -74,7 +74,7 @@ class Test extends  Controller
     public function pagetest()
     {
         $userid = "4846219238449585";
-        $type = 3;
+        $type = 2;
         //实例化模型
         $model = new \app\api\model\Activity();
         //创建活动
